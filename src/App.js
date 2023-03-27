@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import BottomBar from "./atomic-components/molecules/BottomBar";
+import useScrollingDirection from "./hook/useScrollingDirection";
+import { routers } from './routers/browserRouter';
+import { RouterProvider } from 'react-router-dom';
+import Footer from './atomic-components/molecules/Footer';
+import { GlobalStyle } from './global/styles';
+import { ThemeProvider } from 'styled-components';
+import theme from './global/styles/theme';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const { scrollDir } = useScrollingDirection()
+  return ( 
+    <>     
+    <ThemeProvider theme={theme}>   
+      <RouterProvider router={routers} /> 
+      <GlobalStyle />
+      <Footer />
+    </ThemeProvider> 
+    </>  
   );
 }
 

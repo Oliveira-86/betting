@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, Title } from '../../atoms/Text'
-import Carousel from '../Carousel';
+import ImagesCarousel from '../ImagesCarousel';
 import Time from '../Time';
 import { StyledScoreCardLive, Row } from './styles'
 
@@ -38,7 +38,7 @@ function ScoreCardLive({
           <Time variant='ice' time={time} />
       </Row>
       <Row>
-        <Carousel bet={bet} />
+        <ImagesCarousel bet={bet} />
       </Row>
     </StyledScoreCardLive>
   )

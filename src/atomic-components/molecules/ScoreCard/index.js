@@ -1,5 +1,4 @@
 import React from 'react'
-import useSizeElement from '../../../hook/useSizeElement';
 import Badge from '../../atoms/Badge';
 import { Text, Title } from '../../atoms/Text'
 import Time from '../Time';

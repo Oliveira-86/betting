@@ -4,6 +4,8 @@ export const StyledCarousel = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-color: ${({ theme }) => theme.colors.dark};
+    padding-bottom: 50px;
 `;
 
 export const Row = styled.div`
@@ -18,8 +20,8 @@ export const Row = styled.div`
   overflow-x: scroll;
 
   ${({ isMobile }) => isMobile && css`
-    max-width: 700px;
-    height: 380px;
+    max-width: 75%;
+    height: 375px;
     margin: 100px auto 0;
     position: relative;
     overflow: hidden;
@@ -46,7 +48,8 @@ export const StyledArrow = styled.div`
   justify-content: space-between;
 `
 export const PrevButton = styled.div`
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: ${({ theme }) => theme.colors.shadow};
+  border: 1.5px solid ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,11 +63,12 @@ export const PrevButton = styled.div`
 `;
 
 export const NextButton = styled.div`
- background-color: rgba(0, 0, 0, 0.25);
+  background-color: ${({ theme }) => theme.colors.shadow};
+  border: 1.5px solid ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 30px;
   transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
@@ -140,23 +144,20 @@ export const ContainerBadge = styled.div`
 
 export const DotContainer = styled.div`
   position: absolute;
-  bottom: 10px;
+  bottom: -35px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
 `
 
 export const Dot = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 10px; 
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
   background-color: ${({ theme, active }) => active 
-    ? theme.colors.ice 
-    : theme.colors.ice
+    ? theme.colors.secondary 
+    : theme.colors.grey_light
   };
-  border: ${({ theme, active }) => active 
-    ? `3px solid ${theme.colors.secondary}` 
-    : `3px solid ${theme.colors.ice}`
-  };
+    
 `;

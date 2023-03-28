@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Dot from '../../../atoms/Dot'
 import Input from '../../../atoms/Input'
 import { Title } from '../../../atoms/Text'
-import Carousel  from '../../../molecules/Carousel'
+import ImagesCarousel  from '../../../molecules/ImagesCarousel'
 import { StyledLiveHeader, Row } from './styles'
 import { GiSoccerBall, GiBasketballBall, GiAmericanFootballBall } from 'react-icons/gi'
 import { IoMdTennisball } from 'react-icons/io'
@@ -75,7 +75,7 @@ function LiveHeader() {
         <Title marginLeft={'8px'} Mar level={1}>AO VIVO</Title>
       </Row>
       <Input  margintop={'16px'} marginBottom={'16px'} placeholder='Pesquise por jogos ao vivo' />
-      <Carousel sportsList={featureList} swicth /> 
+      <ImagesCarousel sportsList={featureList} swicth /> 
     </StyledLiveHeader>
   )
 }

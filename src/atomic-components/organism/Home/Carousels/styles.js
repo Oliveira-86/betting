@@ -1,5 +1,4 @@
-import styled, { css } from "styled-components";
-import { StyledCard } from "../../../atoms/Card/styles";
+import styled from "styled-components";
 
 export const StyledHomeCarousels= styled.div``;
 

@@ -5,7 +5,7 @@ import NavBar from '../../../molecules/NavBar';
 import { If } from '../../../atoms/if';
 import useDeviceDetect from '../../../../hook/useDeviceDetect';
 import dataSlider from '../../../../api/slides';
-import Carousel from '../../../molecules/Carousel';
+import ImagesCarousel from '../../../molecules/ImagesCarousel';
 
 function HomeHeader() {
   const { width } = useWindowDimensions()
@@ -19,14 +19,14 @@ function HomeHeader() {
         condition={isMobile}
         render={() => (
           <>
-            <Carousel dataSlider={dataSlider} heightProps={heightProps} width={width}  />
+            <ImagesCarousel dataSlider={dataSlider} width={width}  />
             <NavBar heightProps={heightProps} />     
           </>
         )}
         renderElse={() => (
           <>
             <NavBar heightProps={true} />     
-            <Carousel dataSlider={dataSlider} heightProps={heightProps} width={width}  />
+            <ImagesCarousel dataSlider={dataSlider} width={width}  />
           </>
         )}
       />

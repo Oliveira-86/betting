@@ -110,5 +110,116 @@ export const SPORTS = [
     time: '15:30',
     league: 'Premier League',
     bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },{
+    id: 'game9',
+    team1: "Manchester United",
+    team2: "Liverpool",
+    logo1: "https://media.api-sports.io/football/teams/33.png",
+    logo2: "https://media.api-sports.io/football/teams/40.png",
+    goals: {
+      team1: 2,
+      team2: 3,
+    },
+    time: '15:30',
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
+  },
+  {
+    id: 'game10',
+    team1: "Manchester City",
+    team2: "Arsenal",
+    logo1: "https://media.api-sports.io/football/teams/50.png",
+    logo2: "https://media.api-sports.io/football/teams/42.png",
+    goals: {
+      team1: 1,
+      team2: 1,
+    },
+    time: '15:30',
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },
+  {
+    id: 'game11',
+    team1: "Manchester United",
+    team2: "Liverpool",
+    logo1: "https://media.api-sports.io/football/teams/33.png",
+    logo2: "https://media.api-sports.io/football/teams/40.png",
+    goals: {
+      team1: 2,
+      team2: 3,
+    },
+    time: '15:30',
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },
+  {
+    id: 'game12',
+    team1: "Manchester City",
+    team2: "Arsenal",
+    logo1: "https://media.api-sports.io/football/teams/50.png",
+    logo2: "https://media.api-sports.io/football/teams/42.png",
+    goals: {
+      team1: 1,
+      team2: 1,
+    },
+    time: '15:30',
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },
+  {
+    id: 'game13',
+    team1: "Manchester United",
+    team2: "Liverpool",
+    logo1: "https://media.api-sports.io/football/teams/33.png",
+    logo2: "https://media.api-sports.io/football/teams/40.png",
+    goals: {
+      team1: 2,
+      team2: 3,
+    },
+    time: '15:30',
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
+  },
+  {
+    id: 'game14',
+    team1: "Manchester City",
+    team2: "Arsenal",
+    logo1: "https://media.api-sports.io/football/teams/50.png",
+    logo2: "https://media.api-sports.io/football/teams/42.png",
+    goals: {
+      team1: 1,
+      team2: 1,
+    },
+    time: '15:30',
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },
+  {
+    id: 'game15',
+    team1: "Manchester United",
+    team2: "Liverpool",
+    logo1: "https://media.api-sports.io/football/teams/33.png",
+    logo2: "https://media.api-sports.io/football/teams/40.png",
+    goals: {
+      team1: 2,
+      team2: 3,
+    },
+    time: '15:30',
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },
+  {
+    id: 'game16',
+    team1: "Manchester City",
+    team2: "Arsenal",
+    logo1: "https://media.api-sports.io/football/teams/50.png",
+    logo2: "https://media.api-sports.io/football/teams/42.png",
+    goals: {
+      team1: 1,
+      team2: 1,
+    },
+    time: '15:30',
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
   },
   ];

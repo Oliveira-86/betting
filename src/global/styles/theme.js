@@ -2,6 +2,8 @@ export default {
   colors: {
     primary: '#111',
     secondary: '#FF4B00',
+    shadow_secondary: 'rgba(255, 75, 0, 0.25)',
+    shadow: 'rgba(0, 0, 0, 0.25)',
     black: '#000',
     dark: '#414141',
     grey: '#525252',

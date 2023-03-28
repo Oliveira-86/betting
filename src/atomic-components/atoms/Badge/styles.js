@@ -1,10 +1,12 @@
 import styled, { css } from "styled-components";
 
 
-export const StyledCard = styled.div`
+export const StyledBadge = styled.div`
   margin-right:8px;
   border-radius: 8px;
-  border: none;
+  border: 1 solid ${({ theme }) => theme.colors.grey_strong};
+  cursor: pointer;
+  
   ${({ theme, variant }) => {
     switch(variant) {
       case 'ice':

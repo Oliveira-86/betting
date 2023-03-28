@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-export const StyledHomeCarousels= styled.div``;
+export const StyledHomeContent = styled.div`
+
+`;
 
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   z-index: 10;
-  padding: 10px;
 `
 
 export const Container = styled.div`
@@ -19,3 +21,10 @@ export const StyledCarHomeCarousel = styled.div`
   flex-direction: row;
   align-items: center;
 `;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`

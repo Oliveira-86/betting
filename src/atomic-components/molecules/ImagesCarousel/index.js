@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Text, Title } from '../../atoms/Text'
 import { Row, StyledCarousel, StyledScroll, PrevButton, NextButton, StyledArrow, StyledTitle, StyledBanner, DotContainer, Dot } from './styles'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
@@ -9,10 +9,17 @@ import Image from '../../atoms/Image'
 import { If } from '../../atoms/if'
 
 
-function ImagesCarousel({ heightProps, badget, title, swicth, dataSlider, list, width }, props, ref) {
+function ImagesCarousel({ heightProps, title, swicth, dataSlider, list }, props, ref) {
   const [slideIndex, setSlideIndex] = useState(1)
 
   const { isMobile } = useDeviceDetect()
+
+  useEffect(() => {
+    const interval = setInterval(() => slideLeft(), 4000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [slideIndex]);
 
   const slideLeft = () => {
     if(slideIndex !== 1){
@@ -41,7 +48,7 @@ function ImagesCarousel({ heightProps, badget, title, swicth, dataSlider, list, 
       ))}
     </DotContainer> 
   )
-console.log(heightProps)
+  
   return (
     <>
       <StyledCarousel ref={ref}>

@@ -4,7 +4,6 @@ export const StyledCarousel = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-    padding-bottom: 50px;
 `;
 
 export const Row = styled.div`
@@ -62,13 +61,6 @@ export const StyledCard = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-`;
-
-export const StyledTitle = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 export const StyledBanner = styled.div`

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Text, Title } from '../../atoms/Text'
 import { 
     Row, 
     StyledCarousel, 
@@ -7,12 +6,10 @@ import {
     PrevButton, 
     NextButton, 
     StyledArrow, 
-    StyledTitle,  
     Container 
   } from './styles'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import { FaVolleyballBall } from 'react-icons/fa'
-import Switch from '../../atoms/Switch'
 import theme from '../../../global/styles/theme'
 import useDeviceDetect from '../../../hook/useDeviceDetect'
 import { IoMdTennisball } from 'react-icons/io'
@@ -104,29 +101,7 @@ function SportsCarousel({ title, swicth, list }, props, ref) {
 
   return (
     <>
-      <StyledCarousel ref={ref}>
-        {title && (
-          <StyledTitle>
-            <Title 
-              verticalMargin={'25px'} 
-              variant='grey' 
-              level={3}
-              >
-              {title}
-            </Title>
-          {swicth 
-            ? (
-                <StyledTitle>
-                  <Text MarginRight={'5px'} small bold variant='grey'>
-                    AO VIVO
-                  </Text>
-                  <Switch />
-                </StyledTitle>
-              ) 
-            : null}
-          </StyledTitle>
-        )}   
-
+      <StyledCarousel ref={ref}>  
         <StyledScroll>
             <Row isMobile={!isMobile} id='slide'>
               {list?.map((item, index) =>  (

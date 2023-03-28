@@ -1,14 +1,24 @@
 import styled from "styled-components";
+import { StyledCard } from "../../atoms/Card/styles";
 
-export const StyledTableRow = styled.div`
-  border: 2px solid ${({ theme }) => theme.colors.ice};
-  background-color: ${({ theme }) => theme.colors.white};
+export const StyledTableRow = styled(StyledCard)`
+  min-width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+`
+
+export const StyledTableItem = styled.div`
   width: 100%;
-  padding: 8px;
+  margin-bottom: 8px;
   display: flex;
   flex-direction: row;
   margin-top: 5px;
+  border-bottom: 0.3px solid ${({ theme }) => theme.colors.ice};
+  padding-bottom: 8px;
 `
+
 
 export const Column = styled.div`
   width: 50%;
@@ -19,7 +29,6 @@ export const Column = styled.div`
 `
 
 export const Row = styled.div`
-  width: 50%;
   display: flex;
   flex-direction: row;
   align-items: center;

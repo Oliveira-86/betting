@@ -1,13 +1,10 @@
 import styled, { css } from "styled-components";
+import { StyledCard } from "../../atoms/Card/styles";
 
 
-export const StyledScoreCard = styled.div`
+export const StyledScoreCard = styled(StyledCard)`
   padding: 15px;
-  border: 1px solid ${({ theme }) => theme.colors.ice};
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 8px;
   margin: 25px 0px;
-  box-shadow: 0 1px 1px 0.2px rgba(0, 0, 0, 0.2);
 `;
 
 export const Row = styled.div`

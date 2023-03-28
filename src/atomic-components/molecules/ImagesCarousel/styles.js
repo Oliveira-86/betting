@@ -4,7 +4,7 @@ export const StyledCarousel = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: ${({ theme }) => theme.colors.dark};
+    background-color: ${({ theme }) => theme.colors.black};
     padding-bottom: 50px;
 `;
 

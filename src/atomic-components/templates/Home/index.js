@@ -1,6 +1,6 @@
 import React from 'react'
 import BottomBar from '../../molecules/BottomBar';
-import HomeCarousels from '../../organism/Home/Carousels';
+import HomeContent from '../../organism/Home/Content';
 import HomeHeader from '../../organism/Home/Header';
 import { StyledHomeTemplate } from './styles';
 
@@ -116,7 +116,7 @@ function HomeTemplate() {
     <>
       <StyledHomeTemplate>
         <HomeHeader />
-        <HomeCarousels sportsList={DATA} />
+        <HomeContent sportsList={DATA} />
       </StyledHomeTemplate>
       <BottomBar />
       

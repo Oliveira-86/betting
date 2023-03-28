@@ -19,16 +19,15 @@ const BaseStyle = css`
         return `color: ${props.theme.colors.grey}`;
       case "black":
         return `color: ${props.theme.colors.black}`;
+      case "dark":
+        return `color: ${props.theme.colors.dark}`;
       case "secondary":
         return `color: ${props.theme.colors.secondary}`;
       default:
         return `color: ${props.theme.colors.black}`;
     }
   }};
-
-${({ bold }) => bold && css`
-    font-weight: bold;
-  `}
+  
   ${({ isClickable }) => isClickable && css`
     cursor: pointer;
   `}
@@ -81,6 +80,9 @@ export const StyledParagraph = styled.p`
   line-height: 1.45em;
   margin-top: 0;
   margin-bottom: 0rem;
+  ${({ bold }) => bold && css`
+      font-weight: bold;
+  `}
   ${(props) =>
     props.big &&
     `
@@ -96,6 +98,11 @@ export const StyledParagraph = styled.p`
     props.xsmall &&
     css`
       font-size: 0.7em;
+    `}
+     ${(props) =>
+    props.xxsmall &&
+    css`
+      font-size: 0.6em;
     `}
 `;
 

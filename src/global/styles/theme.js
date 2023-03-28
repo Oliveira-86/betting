@@ -5,9 +5,10 @@ export default {
     shadow_secondary: 'rgba(255, 75, 0, 0.25)',
     shadow: 'rgba(0, 0, 0, 0.25)',
     black: '#000',
-    dark: '#414141',
+    grey_strong: '#414141',
+    dark: '#333',
     grey: '#525252',
-    grey_light: '#F8F8FF',
+    grey_light: '#dadada',
     white: '#FFF',
     ice: '#F3F4F5',
     blue: '#5361C9'

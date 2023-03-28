@@ -7,18 +7,18 @@ const Title = (props) => {
 
   switch (level) {
     case 3:
-      return <StyledH3 {...props}>{props.children}</StyledH3>
+      return <StyledH3 {...props} style={props.styles}>{props.children}</StyledH3>
     case 2:
-      return <StyledH2 {...props}>{props.children}</StyledH2>
+      return <StyledH2 {...props} style={props.styles}>{props.children}</StyledH2>
 
     case 1:
     default:
-      return <StyledH1 {...props}>{props.children}</StyledH1>
+      return <StyledH1 {...props} style={props.styles}>{props.children}</StyledH1>
   }
 }
 
 const Text = (props) => {
-  return <StyledParagraph {...props}>{props.children}</StyledParagraph>
+  return <StyledParagraph style={props.style} {...props}>{props.children}</StyledParagraph>
 }
 
 export { Title, Text }

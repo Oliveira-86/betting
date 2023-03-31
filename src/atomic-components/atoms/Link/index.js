@@ -4,7 +4,7 @@ import { StyledLink } from './styles'
 
 const Link = (props) => {
   return (
-    <StyledLink>
+    <StyledLink style={props.style}>
       <Text {...props}>
         {props.children}
       </Text>

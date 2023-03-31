@@ -29,8 +29,9 @@ export const StyledArrow = styled.div`
   justify-content: space-between;
 `
 export const PrevButton = styled.div`
+  border: 1px solid ${({ theme }) => theme.colors.grey_light};
   background-color: ${({ theme }) => theme.colors.white};
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,8 +44,9 @@ export const PrevButton = styled.div`
 `;
 
 export const NextButton = styled.div`
- background-color: ${({ theme }) => theme.colors.white};
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid ${({ theme }) => theme.colors.grey_light};  
+  background-color: ${({ theme }) => theme.colors.white};
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;

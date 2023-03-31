@@ -1,7 +1,7 @@
 import React from 'react'
 import { SPORTS } from '../../../api/sports'
 import LiveHeader from '../../../atomic-components/organism/Live/Header'
-import ScoreCardLive from '../../molecules/ScoreCard copy'
+import ScoreCardLive from '../../molecules/ScoreCardSecondary'
 
 function LiveTemplate() {
  

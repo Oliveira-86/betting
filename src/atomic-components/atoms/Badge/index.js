@@ -4,7 +4,7 @@ import { StyledBadge } from './styles';
 function Badge(props) {
 
   return (
-    <StyledBadge onClick={props.onClick} {...props}>{props.children}</StyledBadge>
+    <StyledBadge onClick={props.onClick} style={props.style} {...props}>{props.children}</StyledBadge>
   )
 }
 

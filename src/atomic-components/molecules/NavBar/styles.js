@@ -1,11 +1,12 @@
 import styled, { css } from "styled-components";
 
-export const StyledHeaderMol = styled.div` 
-  width: 100%;
+export const StyledHeaderMol = styled.header` 
+  width: ${({ widthProps }) => widthProps};
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.black};
   padding: 10px 15px;
   z-index: 1000;
   ${({ hasSameHeight }) =>  {
@@ -22,8 +23,8 @@ export const StyledHeaderMol = styled.div`
   }}
 `
 
-export const Row = styled.div`
-  margin-top: 5px;
+export const Row = styled.nav`
+  margin-top: ${({ marginTop }) => marginTop ? '5px' : '0px'};
   padding-right: 10px;
   display: flex;
   align-items: center;

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import { StyledCard } from "../../atoms/Card/styles";
 
+export const StyledBarside = styled.section`
+  display: flex;
+  flex-direction: column;
+`
+
 export const SyledSportsBarsides = styled(StyledCard)`
   height: 550px;
-  min-width: 15%;
+  width: 100%;
   margin-right: 10px;
-   padding: 12px 25px 12px 25px;
+  padding: 12px 25px 12px 25px;
   
 `
 
@@ -23,4 +28,3 @@ export const StyledItem = styled.div`
   }
 
 `
-

@@ -9,7 +9,7 @@ import theme from '../../../global/styles/theme'
 function Time({ time, dot, variant }) {
   return (
     <StyledTime>
-      {dot ? <Dot /> :  <MdLiveTv size={20} color={theme.colors.ice} />}
+      {dot ? <Dot /> :  <MdLiveTv size={20} color={theme.colors.grey} />}
       <Text variant={variant} marginLeft='3px' xsmall>
         {time}
       </Text>

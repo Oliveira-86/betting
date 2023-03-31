@@ -93,6 +93,9 @@ export const StyledButton = styled.button`
   ${({ margintop }) => margintop && css`
       margin-top: ${margintop}
   `}
+  ${({ marginRight }) => marginRight && css`
+      margin-right : ${marginRight}
+  `}
 `;
 
 export const ButtonText = styled.p`

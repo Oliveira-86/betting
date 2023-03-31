@@ -28,7 +28,7 @@ const NavBar = ({ heightProps }) => {
     <If 
       condition={isMobile}
       render={() => (
-        <StyledHeaderMol hasSameHeight={hasSameHeight}>
+        <StyledHeaderMol widthProps={'100%'}  hasSameHeight={hasSameHeight}>
           <Row>
             <Button textVariant='secondary' variant='outlinedSecondary' label='Login' heightProps={'30px'} widthProps={'80px'} />
           </Row>
@@ -38,8 +38,8 @@ const NavBar = ({ heightProps }) => {
         </StyledHeaderMol>
       )}
       renderElse={() => (
-        <StyledHeaderMol  hasSameHeight={true}>
-          <Row widthProps={'40%'}>   
+        <StyledHeaderMol widthProps={'100%'}  hasSameHeight={true}>
+          <Row marginTop widthProps={'35%'}>     
             <SiEpicgames color={theme.colors.secondary} size={50} />
             <Link variant='secondary' bold>
               Esportes
@@ -57,9 +57,9 @@ const NavBar = ({ heightProps }) => {
               Promoções
             </Link>
           </Row>
-          <Row widthProps={'20%'}>
-            <Button textVariant='secondary' variant='outlinedSecondary' label='Login' heightProps={'30px'} widthProps={'80px'} />
-            <Button textVariant='black' variant='secondary' label='Registre-se' heightProps={'30px'} widthProps={'80px'} />
+          <Row marginTop widthProps={'20%'}>
+            <Button textVariant='secondary' variant='outlinedSecondary' label='Login' heightProps={'30px'} marginRight={'10px'} />
+            <Button textVariant='black' variant='secondary' label='Registre-se' heightProps={'30px'} />
           </Row>
         </StyledHeaderMol>
       )}

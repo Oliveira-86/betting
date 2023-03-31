@@ -5,6 +5,7 @@ export const StyledHomeHeader = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const Column = styled.div`

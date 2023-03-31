@@ -1,7 +1,21 @@
 import styled from "styled-components";
 import { StyledCard } from "../../atoms/Card/styles";
 
-export const StyledTableRow = styled(StyledCard)`
+export const StyledRightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`
+
+export const StyledSportsColumn = styled(StyledCard)`
+  min-width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+`
+
+export const StyledCasinoGames = styled(StyledCard)`
   min-width: 100%;
   padding: 15px 20px;
   display: flex;
@@ -32,5 +46,5 @@ export const Row = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `

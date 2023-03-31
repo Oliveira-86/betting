@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { StyledLink } from "../../atoms/Link/styles";
 
-export const ItemContainer = styled.div`
+export const ItemContainer = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,6 +15,7 @@ export const StyledFooter = styled.div`
   align-items: flex-start;
   background-color: ${({ theme }) => theme.colors.dark};
   padding-bottom: 50px;
+  margin-top: 30px;
 `
 
 export const Link = styled.a`
@@ -30,4 +32,10 @@ export const Row = styled(Link)`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+`
+
+export const Column = styled(StyledLink)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `

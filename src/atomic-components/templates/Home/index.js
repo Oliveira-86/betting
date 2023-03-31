@@ -1,4 +1,5 @@
 import React from 'react'
+import useDeviceDetect from '../../../hook/useDeviceDetect';
 import BottomBar from '../../molecules/BottomBar';
 import HomeContent from '../../organism/Home/Content';
 import HomeHeader from '../../organism/Home/Header';
@@ -112,13 +113,15 @@ const DATA = [
 
 function HomeTemplate() {
   
+  const { isMobile } = useDeviceDetect()
+
   return (
     <>
       <StyledHomeTemplate>
         <HomeHeader />
         <HomeContent sportsList={DATA} />
       </StyledHomeTemplate>
-      <BottomBar />
+      {isMobile ? <BottomBar /> : null}
       
     </>
   )

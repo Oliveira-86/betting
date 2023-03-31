@@ -1,10 +1,11 @@
 import React from 'react'
+import Badge from '../../atoms/Badge';
 import { Text, Title } from '../../atoms/Text'
 import ImagesCarousel from '../ImagesCarousel';
 import Time from '../Time';
-import { StyledScoreCardLive, Row } from './styles'
+import { StyledScoreCardSecondary, Row } from './styles'
 
-function ScoreCardLive({ 
+function ScoreCardSecondary({ 
   logo1, 
   logo2, 
   altTeam1, 
@@ -18,7 +19,7 @@ function ScoreCardLive({
   bet 
 }) {
   return (
-    <StyledScoreCardLive>
+    <StyledScoreCardSecondary>
       <Text small variant='grey'>{league}</Text>
       <Row>
         <Row>
@@ -35,13 +36,15 @@ function ScoreCardLive({
           <Title textAlign={'center'} small bold>{goalsTeam2}</Title>
       </Row>
       <Row marginVertical>
-          <Time variant='ice' time={time} />
+          <Time variant='grey' time={time} />
       </Row>
       <Row>
-        <ImagesCarousel bet={bet} />
+        <Badge centered widthProps='28%' heightProps='30px' variant='ice'><Text small>{bet[0]}</Text></Badge>
+        <Badge centered widthProps='28%' heightProps='30px' variant='ice'><Text small>{bet[1]}</Text></Badge>
+        <Badge centered widthProps='28%' heightProps='30px' variant='ice'><Text small>{bet[2]}</Text></Badge>
       </Row>
-    </StyledScoreCardLive>
+    </StyledScoreCardSecondary>
   )
 }
 
-export default ScoreCardLive
+export default ScoreCardSecondary

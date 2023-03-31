@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHomeContent = styled.div`
-
+  width: 75%;
 `;
 
 export const Row = styled.div`

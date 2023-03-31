@@ -1,11 +1,10 @@
 import styled, { css } from "styled-components";
 
-
-export const StyledScoreCardLive = styled.div`
+export const StyledScoreCardSecondary = styled.div`
   padding: 15px;
   border: 2px solid ${({ theme }) => theme.colors.ice};
   border-radius: 8px;
-  margin-top: 25px;
+  margin-bottom: 10px;
 `;
 
 export const Row = styled.div`

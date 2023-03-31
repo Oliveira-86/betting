@@ -1,12 +1,14 @@
 import React from 'react'
 import { Text, Title } from '../../atoms/Text'
-import { SyledSportsBarsides, StyledItem } from './styles'
+import { StyledBarside, SyledSportsBarsides, StyledItem } from './styles'
 import { v4 as uuidv4 } from "uuid";
 import { MdCasino, MdSportsHockey } from 'react-icons/md'
-import { GiAmericanFootballBall, GiBasketballBall, GiBoxingGlove, GiCycling, GiSoccerBall } from 'react-icons/gi';
-import { FaVolleyballBall } from 'react-icons/fa';
-import theme from '../../../global/styles/theme';
-import { IoMdTennisball } from 'react-icons/io';
+import { GiAmericanFootballBall, GiBasketballBall, GiBoxingGlove, GiCycling, GiSoccerBall } from 'react-icons/gi'
+import { FaVolleyballBall } from 'react-icons/fa'
+import theme from '../../../global/styles/theme'
+import { IoMdTennisball } from 'react-icons/io'
+import Image from '../../atoms/Image'
+import vertical_banner from '../../../assets/vertical_banner.jpg'
 
 const sportsList = [
   {
@@ -56,19 +58,20 @@ const sportsList = [
   },
 ]
 
-const SportsBarside = ({ heading }) => {
+const SportsBarside = ({ heading, style }) => {
 
   const Item = ({ icon, name }) => (
-    <StyledItem>
-      {icon}
-      <Text bold variant='grey' style={{ marginLeft: 20 }}>
-        {name}
-      </Text>
-    </StyledItem>
+      <StyledItem>
+        {icon}
+        <Text bold variant='grey' style={{ marginLeft: 20 }}>
+          {name}
+        </Text>
+      </StyledItem>
   )
 
   return (
-    <SyledSportsBarsides>
+  <StyledBarside style={style}>
+    <SyledSportsBarsides >
       <Title 
         level={2}
         verticalMargin={'30px'} 
@@ -84,6 +87,8 @@ const SportsBarside = ({ heading }) => {
         />
       ))}
     </SyledSportsBarsides>
+      <Image src={vertical_banner} style={{ width: '100%', borderRadius: 8, marginTop: 10 }}  />
+  </StyledBarside>
   )
 }
 

@@ -20,11 +20,25 @@ export const StyledItem = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin: 25px 0px;
+  margin: 15px 0px;
+  padding: 8px;
+  cursor: pointer;
+  color: ${({ theme, active }) => active 
+    ? theme.colors.secondary
+    : 'transparent'
+  };
+  background-color: ${({ theme, active }) => active 
+    ? theme.colors.shadow_secondary
+    : 'transparent'
+  };
+  border-radius: ${({ active }) => active && '10px'};
 
-  :hover {
-    background-color: ${({ theme }) => theme.colors.secondary_shadow};
-    border-radius: 50%;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.shadow_secondary};
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    color: ${({ theme }) => theme.colors.secondary}
   }
 
 `

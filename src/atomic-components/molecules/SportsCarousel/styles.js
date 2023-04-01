@@ -40,7 +40,8 @@ export const PrevButton = styled.div`
   cursor: pointer;
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 0px;
+  z-index: 100;
 `;
 
 export const NextButton = styled.div`
@@ -55,7 +56,7 @@ export const NextButton = styled.div`
   cursor: pointer;
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 0px;
 `;
 
 export const StyledCard = styled.div`

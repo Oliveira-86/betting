@@ -7,6 +7,7 @@ import theme from '../../../global/styles/theme'
 import useDeviceDetect from '../../../hook/useDeviceDetect'
 import Image from '../../atoms/Image'
 import { If } from '../../atoms/if'
+import aviator_banner from '../../../assets/aviator.jpg'
 
 
 function ImagesCarousel({ heightProps, title, swicth, dataSlider, list }, props, ref) {
@@ -75,15 +76,14 @@ function ImagesCarousel({ heightProps, title, swicth, dataSlider, list }, props,
         )}   
 
         <StyledScroll>
-            <Row isMobile={!isMobile}>
+            <Row isMobile={isMobile}>
               <If 
                 condition={isMobile}
-                render={() => list?.map((item, index) =>  (
+                render={() => dataSlider?.map((item, index) =>  (
                       <>
-                        <StyledBanner slideIndex={slideIndex === index + 1} >        
-                          <Image key={item.id}  heightProps={`${heightProps}px`} src={item.src} alt='banner shoes' />   
+                        <StyledBanner slideIndex={slideIndex === index + 1} isMobile={isMobile}>        
+                          <Image key={item.id} src={aviator_banner} alt='banner shoes' />   
                         </StyledBanner>
-                        <DotsSlider />  
                       </>
                     ))}
                     

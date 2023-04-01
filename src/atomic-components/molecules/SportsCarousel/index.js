@@ -90,15 +90,6 @@ function SportsCarousel({ title, swicth, list }, props, ref) {
     slider.scrollLeft = slider.scrollLeft  + 400;
   }  
 
-  const onHandleEventItens = (item) => {
-    setSelectedId(item.id)
-    if (variant === 'ice') {
-      setVariant('black')
-    } else {
-      setVariant('ice')
-    }
-  }
-
   return (
     <>
       <StyledCarousel ref={ref}>  

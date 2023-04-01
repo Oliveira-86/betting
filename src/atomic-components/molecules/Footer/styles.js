@@ -30,7 +30,7 @@ export const Row = styled(Link)`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
 `
 

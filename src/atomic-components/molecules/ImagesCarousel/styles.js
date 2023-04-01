@@ -9,26 +9,30 @@ export const StyledCarousel = styled.div`
 `;
 
 export const Row = styled.div`
-  width: 100%;
-  height:100%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  overflow: hidden;
-  overflow-x: scroll;
-
   ${({ isMobile }) => isMobile && css`
-    max-width: 75%;
-    height: 375px;
-    margin: 100px auto 0;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    background-color: ${({ theme }) => theme.colors.secondary};
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
   `}
+
+  ${({ slideIndex }) => slideIndex ? css`
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+    border-radius: 20px;
+    ` : css`
+      opacity: 1;
+    `
+  }
+
+  max-width: 75%;
+  height: 375px;
+  margin: 100px auto 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
 
   ::-webkit-scrollbar {
     display: none;
@@ -94,22 +98,8 @@ export const StyledTitle = styled.div`
 export const StyledBanner = styled.div`
   width: 100%;
   height: 100%;
-
   background-position: center;
   background-size: cover;
-
-   ${({ slideIndex }) => slideIndex ? css`
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        opacity: 0;
-        transition: opacity ease-in-out 0.4s;
-        border-radius: 20px;
-      ` : css`
-        opacity: 1;
-      `
-    }
-
 
 
   ${({ isMobile }) => isMobile && css`

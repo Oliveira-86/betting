@@ -89,6 +89,7 @@ export const StyledParagraph = styled.p`
       font-size: 1.2em;
       margin-bottom: 0.5rem;
     `}
+
   ${(props) =>
     props.small &&
     css`
@@ -103,6 +104,12 @@ export const StyledParagraph = styled.p`
     props.xxsmall &&
     css`
       font-size: 0.6em;
+    `}
+
+    ${({ hoverSecondary }) => hoverSecondary && css`
+      &:hover {
+        color: ${({ theme }) => theme.colors.secondary}
+      }
     `}
 `;
 

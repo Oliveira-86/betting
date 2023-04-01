@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, Title } from '../../atoms/Text'
 import { StyledBarside, SyledSportsBarsides, StyledItem } from './styles'
 import { v4 as uuidv4 } from "uuid";
@@ -14,56 +14,84 @@ const sportsList = [
   {
     id: uuidv4(),
     name: 'Futebol',
-    icon: <GiSoccerBall size={15} color={theme.colors.grey} />
+    icon: {
+            active: <GiSoccerBall size={15} color={theme.colors.secondary} />,
+            inactive: <GiSoccerBall size={15} color={theme.colors.grey} />
+          }
   },
   {
     id: uuidv4(),
     name: 'Basquete',
-    icon: <GiBasketballBall size={15} color={theme.colors.grey} />
+    icon: {
+            active: <GiBasketballBall size={15} color={theme.colors.secondary} />,
+            inactive: <GiBasketballBall size={15} color={theme.colors.grey} />
+          }
   },
   {
     id: uuidv4(),
     name: 'Volei',
-    icon: <FaVolleyballBall size={15} color={theme.colors.grey} />
+    icon: {
+      active: <FaVolleyballBall size={15} color={theme.colors.secondary} />,
+      inactive: <FaVolleyballBall size={15} color={theme.colors.grey} />
+    }
   },
   {
     id: uuidv4(),
     name: 'Casino',
-    icon: <MdCasino size={15} color={theme.colors.grey} />
+    icon: {
+            active: <MdCasino size={15} color={theme.colors.secondary} />,
+            inactive: <MdCasino size={15} color={theme.colors.grey} />
+          }
   },
   {
     id: uuidv4(),
     name: 'Boxe',
-    icon: <GiBoxingGlove size={15} color={theme.colors.grey} />
+    icon: {
+            active: <GiBoxingGlove size={15} color={theme.colors.secondary} />,
+            inactive: <GiBoxingGlove size={15} color={theme.colors.grey} />
+          }
   },
   {
     id: uuidv4(),
     name: 'Football',
-    icon: <GiAmericanFootballBall size={15} color={theme.colors.grey} />
+    icon:  {
+            active: <GiAmericanFootballBall size={15} color={theme.colors.secondary} />,
+            inactive: <GiAmericanFootballBall size={15} color={theme.colors.grey} />
+          } 
   },
   {
     id: uuidv4(),
     name: 'Ciclismo',
-    icon: <GiCycling size={15} color={theme.colors.grey} />
+    icon: {
+            active: <GiCycling size={15} color={theme.colors.secondary} />,
+            inactive: <GiCycling size={15} color={theme.colors.grey} />
+          }
   },
   {
     id: uuidv4(),
     name: 'Tênis',
-    icon: <IoMdTennisball size={15} color={theme.colors.grey} />
+    icon: {
+            active: <IoMdTennisball size={15} color={theme.colors.secondary} />,
+            inactive: <IoMdTennisball size={15} color={theme.colors.grey} />
+          }
   },
   {
     id: uuidv4(),
     name: 'Hóquei',
-    icon: <MdSportsHockey size={15} color={theme.colors.grey} />
+    icon: {
+            active: <MdSportsHockey size={15} color={theme.colors.secondary} />,
+            inactive: <MdSportsHockey size={15} color={theme.colors.grey} />
+          }
   },
 ]
 
 const SportsBarside = ({ heading, style }) => {
+  const [activeIndex, setActiveIndex] = useState(false)
 
-  const Item = ({ icon, name }) => (
-      <StyledItem>
+  const Item = ({ icon, name, onClick, active, variant }) => (
+      <StyledItem active={active} onClick={onClick}>
         {icon}
-        <Text bold variant='grey' style={{ marginLeft: 20 }}>
+        <Text bold variant={variant} style={{ marginLeft: 20 }}>
           {name}
         </Text>
       </StyledItem>
@@ -80,10 +108,13 @@ const SportsBarside = ({ heading, style }) => {
       >
         {heading}
       </Title> 
-      {sportsList.map((item) => (
-        <Item  
-          icon={item.icon}
+      {sportsList.map((item, index) => (
+        <Item
+          onClick={() => setActiveIndex(index)}
+          icon={activeIndex === index ? item.icon.active : item.icon.inactive}
           name={item.name}
+          active={activeIndex === index}
+          variant={activeIndex === index ? 'secondary' : 'grey'}
         />
       ))}
     </SyledSportsBarsides>

@@ -22,7 +22,7 @@ function HomeContent({ sportsList, tableRowData }) {
       condition={isMobile}
       render={() => (
         <StyledHomeContent>
-          <Row>
+          {/* <Row>
             <SportsCarousel list={sportsList} />
           </Row>
           <Row>
@@ -47,7 +47,7 @@ function HomeContent({ sportsList, tableRowData }) {
           <Card centered >
             <Banner style={{ marginTop: 25, marginBottom: 25, borderRadius: 8, alignSelf: 'center' }} widthProps='280px'  src={bannerImage} alt='banner' />
           </Card>
-          <Button style={{ width: '90%', marginLeft: 13, marginBottom: 25 }} variant='secondary' label='Aposte agora!!' textVariant='white' />
+          <Button style={{ width: '90%', marginLeft: 13, marginBottom: 25 }} variant='secondary' label='Aposte agora!!' textVariant='white' /> */}
         </StyledHomeContent>
       )}
       renderElse={() => (

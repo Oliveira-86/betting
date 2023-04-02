@@ -118,7 +118,7 @@ const SportsBarside = ({ heading, style }) => {
         />
       ))}
     </SyledSportsBarsides>
-      <Image src={vertical_banner} style={{ width: '100%', borderRadius: 8, marginTop: 10 }}  />
+    <Image src={vertical_banner} style={{ width: '100%', borderRadius: 8, marginTop: 10 }}  />
   </StyledBarside>
   )
 }

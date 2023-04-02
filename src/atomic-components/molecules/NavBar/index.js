@@ -6,36 +6,57 @@ import useDeviceDetect from '../../../hook/useDeviceDetect'
 import { If } from '../../atoms/if'
 import Link from '../../atoms/Link'
 import { SiEpicgames } from 'react-icons/si'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import theme from '../../../global/styles/theme'
 
 
 
-const NavBar = ({ heightProps }) => {
+const NavBar = ({ heightProps, setHasToggleSidebarProps }) => {
   const [hasSameHeight, setHasSameHeight] = useState(false)
+  const [hasToggleSidebar, setHasToggleSidebar] = useState(false)
   const { isMobile } = useDeviceDetect()
   
-  const { scrollPosition } = useScrollingPosition()   
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+  };
+
   
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);  
+
   useEffect(() => {
     if (scrollPosition >= heightProps) {
       setHasSameHeight(true)
     } else {
       setHasSameHeight(false)
     }
-  }, [scrollPosition, heightProps])
+  }, [scrollPosition])
+
+  const onHandleToggleSidebar = () => {
+    setHasToggleSidebar(!hasToggleSidebar)
+  }
 
   return (
     <If 
       condition={isMobile}
       render={() => (
-        <StyledHeaderMol widthProps={'100%'}  hasSameHeight={hasSameHeight}>
-          <Row>
-            <Button textVariant='secondary' variant='outlinedSecondary' label='Login' heightProps={'30px'} widthProps={'80px'} />
-          </Row>
-          <Row>
-            <Button textVariant='black' variant='secondary' label='Registre-se' heightProps={'30px'} widthProps={'80px'} />
-          </Row>
+        <>
+        <StyledHeaderMol isMobile={isMobile} widthProps={'100%'}  hasSameHeight={scrollPosition >= 220}>
+          <GiHamburgerMenu color={theme.colors.white} size={30} onClick={() =>{ 
+            onHandleToggleSidebar(true)
+            setHasToggleSidebarProps(hasToggleSidebar)
+          }} />
+          <SiEpicgames color={theme.colors.secondary} size={35} />
         </StyledHeaderMol>
+        </>
       )}
       renderElse={() => (
         <StyledHeaderMol widthProps={'100%'}  hasSameHeight={true}>

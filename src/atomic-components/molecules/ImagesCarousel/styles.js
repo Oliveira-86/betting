@@ -6,33 +6,28 @@ export const StyledCarousel = styled.div`
     overflow: hidden;
     background-color: ${({ theme }) => theme.colors.black};
     padding-bottom: 50px;
+
+    ${({ isMobile }) => isMobile && css`
+     padding-bottom: 30px;
+    `}
 `;
 
 export const Row = styled.div`
-  ${({ isMobile }) => isMobile && css`
-    width: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: opacity ease-in-out 0.4s;
-  `}
-
-  ${({ slideIndex }) => slideIndex ? css`
-    width: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: opacity ease-in-out 0.4s;
-    border-radius: 20px;
-    ` : css`
-      opacity: 1;
-    `
-  }
-
   max-width: 75%;
   height: 375px;
   margin: 100px auto 0;
   position: relative;
   overflow: hidden;
   border-radius: 25px;
+
+  ${({ isMobile }) => isMobile && css`
+    max-width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    margin: 0px auto 0;
+  `}
 
   ::-webkit-scrollbar {
     display: none;
@@ -57,13 +52,22 @@ export const PrevButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 22.5px;
+  width: 45px;
+  height: 45px;
   transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
   position: absolute;
   top: 50%;
   left: 10px;
+
+  ${({ isMobile }) => isMobile && css`
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid ${({ theme }) => theme.colors.white};
+  `}
 `;
 
 export const NextButton = styled.div`
@@ -72,13 +76,22 @@ export const NextButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 30px;
+  border-radius: 22.5px;
+  width: 45px;
+  height: 45px;
   transform: translateY(-50%);
   z-index: 1;
   cursor: pointer;
   position: absolute;
   top: 50%;
   right: 10px;
+
+  ${({ isMobile }) => isMobile && css`
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid ${({ theme }) => theme.colors.white};
+  `}
 `;
 
 export const StyledCard = styled.div`
@@ -98,8 +111,22 @@ export const StyledTitle = styled.div`
 export const StyledBanner = styled.div`
   width: 100%;
   height: 100%;
+
   background-position: center;
   background-size: cover;
+
+   ${({ slideIndex }) => slideIndex ? css`
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity ease-in-out 0.4s;
+        border-radius: 20px;
+      ` : css`
+        opacity: 1;
+      `
+    }
+
 
 
   ${({ isMobile }) => isMobile && css`
@@ -138,6 +165,10 @@ export const DotContainer = styled.div`
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+
+  ${({ isMobile }) => isMobile && css`
+    bottom: -20px;
+  `}
 `
 
 export const Dot = styled.div`
@@ -149,5 +180,12 @@ export const Dot = styled.div`
     ? theme.colors.secondary 
     : theme.colors.grey_light
   };
+
+${({ isMobile }) => isMobile && css`
+    margin-right: 6px; 
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+  `}
     
 `;

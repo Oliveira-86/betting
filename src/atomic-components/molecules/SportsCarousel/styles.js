@@ -4,6 +4,7 @@ export const StyledCarousel = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
+
 `;
 
 export const Row = styled.div`
@@ -77,6 +78,7 @@ export const StyledBanner = styled.div`
         width: 100%;
         height: 100%;
         position: absolute;
+    
         opacity: 0;
         transition: opacity ease-in-out 0.4s;
         border-radius: 20px;
@@ -92,6 +94,7 @@ export const StyledBanner = styled.div`
         width: 100%;
         height: 100%;
         position: absolute;
+    
         opacity: 0;
         transition: opacity ease-in-out 0.4s;
         border-radius: 20px;

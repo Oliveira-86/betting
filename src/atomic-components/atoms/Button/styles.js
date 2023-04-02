@@ -41,7 +41,7 @@ export const BaseStyled = styled.button`
 export const StyledButton = styled.button`
   display: flex;
   position: relative;
-  padding: ${({ large }) => (large ? "15px" : "10px")};
+  padding: ${({ large }) => (large ? "15px" : "8px")};
   border-radius: 4px;
   cursor: pointer;
   font-weight: 700;

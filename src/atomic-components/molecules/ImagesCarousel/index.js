@@ -10,7 +10,7 @@ import { If } from '../../atoms/if'
 import aviator_banner from '../../../assets/aviator.jpg'
 
 
-function ImagesCarousel({ heightProps, title, swicth, dataSlider, list }, props, ref) {
+function ImagesCarousel({ isSidebarOpen, title, swicth, dataSlider, list }, props, ref) {
   const [slideIndex, setSlideIndex] = useState(1)
 
   const { isMobile } = useDeviceDetect()
@@ -43,16 +43,16 @@ function ImagesCarousel({ heightProps, title, swicth, dataSlider, list }, props,
   }
 
   const DotsSlider = () => (   
-    <DotContainer>
+    <DotContainer isMobile={isMobile}>
       {Array.from({ length: dataSlider.length }).map((_, index) => (
-        <Dot active={slideIndex === index + 1} onClick={() => moveDot(index + 1)}  />
+        <Dot isMobile={isMobile} active={slideIndex === index + 1} onClick={() => moveDot(index + 1)}  />
       ))}
     </DotContainer> 
   )
   
   return (
     <>
-      <StyledCarousel ref={ref}>
+      <StyledCarousel isMobile={isMobile} ref={ref}>
         {title && (
           <StyledTitle>
             <Title 
@@ -82,7 +82,7 @@ function ImagesCarousel({ heightProps, title, swicth, dataSlider, list }, props,
                 render={() => dataSlider?.map((item, index) =>  (
                       <>
                         <StyledBanner slideIndex={slideIndex === index + 1} isMobile={isMobile}>        
-                          <Image key={item.id} src={aviator_banner} alt='banner shoes' />   
+                          <Image key={item.id} src={item.src} alt='banner shoes' />   
                         </StyledBanner>
                       </>
                     ))}
@@ -97,14 +97,16 @@ function ImagesCarousel({ heightProps, title, swicth, dataSlider, list }, props,
                     ))
                     )}
               /> 
+             {!isSidebarOpen && (
               <StyledArrow>
-                <PrevButton {...props}>
-                  <MdChevronLeft onClick={slideLeft} size={40} color={theme.colors.ice} />
-                </PrevButton>
-                <NextButton {...props}>
-                  <MdChevronRight onClick={slideRight}  size={40} color={theme.colors.ice} />
-                </NextButton>
-              </StyledArrow>
+                  <PrevButton isMobile={isMobile} {...props}>
+                    <MdChevronLeft onClick={slideLeft} size={40} color={theme.colors.ice} />
+                  </PrevButton>
+                  <NextButton isMobile={isMobile} {...props}>
+                    <MdChevronRight onClick={slideRight}  size={40} color={theme.colors.ice} />
+                  </NextButton>
+                </StyledArrow>
+              )}
             </Row>            
             <DotsSlider />                        
           </StyledScroll>

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const StyledCarousel = styled.div`
     width: 100%;
@@ -10,7 +10,7 @@ export const StyledCarousel = styled.div`
 export const Row = styled.div`
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: ${({ isMobile }) => isMobile ? 'scroll' : 'hidden'};
   white-space: nowrap;
   scroll-behavior: smooth;
   display: flex;
@@ -29,6 +29,7 @@ export const StyledArrow = styled.div`
   align-items: center;
   justify-content: space-between;
 `
+
 export const PrevButton = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.grey_light};
   background-color: ${({ theme }) => theme.colors.white};
@@ -42,7 +43,7 @@ export const PrevButton = styled.div`
   position: absolute;
   top: 50%;
   left: 0px;
-  z-index: 100;
+  z-index: 10;
 `;
 
 export const NextButton = styled.div`
@@ -60,50 +61,13 @@ export const NextButton = styled.div`
   right: 0px;
 `;
 
+
 export const StyledCard = styled.div`
   padding: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
-
-export const StyledBanner = styled.div`
-  width: 100%;
-  height: 100%;
-
-  background-position: center;
-  background-size: cover;
-
-   ${({ slideIndex }) => slideIndex ? css`
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    
-        opacity: 0;
-        transition: opacity ease-in-out 0.4s;
-        border-radius: 20px;
-      ` : css`
-        opacity: 1;
-      `
-    }
-
-
-
-  ${({ isMobile }) => isMobile && css`
-    ${({ slideIndex }) => slideIndex ? css`
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    
-        opacity: 0;
-        transition: opacity ease-in-out 0.4s;
-        border-radius: 20px;
-      ` : css`
-        opacity: 1;
-      `
-    }
-  `}
-`; 
 
 export const Container = styled.div`
   margin-left: 8px;
@@ -123,6 +87,7 @@ export const ContainerBadge = styled.div`
 export const DotContainer = styled.div`
   position: absolute;
   bottom: -35px;
+  
   left: 50%;
   transform: translateX(-50%);
   display: flex;

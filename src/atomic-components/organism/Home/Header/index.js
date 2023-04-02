@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyledHomeHeader } from './styles';
 import useWindowDimensions from '../../../../hook/useWindowDimensions';
 import NavBar from '../../../molecules/NavBar';
@@ -6,9 +6,6 @@ import { If } from '../../../atoms/if';
 import useDeviceDetect from '../../../../hook/useDeviceDetect';
 import dataSlider from '../../../../api/slides';
 import ImagesCarousel from '../../../molecules/ImagesCarousel';
-import NavSidebar from '../../../molecules/NavSidebar';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 function HomeHeader() {
   const [isSidebarOpen, setIsSidebarOpen] = useState()
@@ -26,7 +23,6 @@ function HomeHeader() {
           <>
             <ImagesCarousel isSidebarOpen={isSidebarOpen} dataSlider={dataSlider} width={width}  />
             <NavBar heightProps={heightProps} isSidebarOpen={isSidebarOpen} setHasToggleSidebarProps={setIsSidebarOpen} /> 
-            <NavSidebar isSidebarOpen={isSidebarOpen} setHasToggleSidebarProps={setIsSidebarOpen} />
           </>
         )}
         renderElse={() => (

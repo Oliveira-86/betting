@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import useScrollingPosition from '../../../hook/useScrollingPosition'
 import { Button } from '../../atoms/Button'
 import { StyledHeaderMol, Row } from './styles'
 import useDeviceDetect from '../../../hook/useDeviceDetect'
@@ -8,6 +7,7 @@ import Link from '../../atoms/Link'
 import { SiEpicgames } from 'react-icons/si'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import theme from '../../../global/styles/theme'
+import NavSidebar from '../NavSidebar'
 
 
 
@@ -19,8 +19,8 @@ const NavBar = ({ heightProps, setHasToggleSidebarProps }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
-      const position = window.pageYOffset;
-      setScrollPosition(position);
+    const position = window.pageYOffset;
+    setScrollPosition(position);
   };
 
   
@@ -40,10 +40,6 @@ const NavBar = ({ heightProps, setHasToggleSidebarProps }) => {
     }
   }, [scrollPosition])
 
-  const onHandleToggleSidebar = (open) => {
-    setHasToggleSidebar(open)
-  }
-
   return (
     <If 
       condition={isMobile}
@@ -51,11 +47,11 @@ const NavBar = ({ heightProps, setHasToggleSidebarProps }) => {
         <>
         <StyledHeaderMol isMobile={isMobile} widthProps={'100%'}  hasSameHeight={scrollPosition >= 220}>
           <GiHamburgerMenu color={theme.colors.white} size={30} onClick={() =>{ 
-            onHandleToggleSidebar(true)
-            setHasToggleSidebarProps(hasToggleSidebar)
+            setHasToggleSidebar(true)
           }} />
           <SiEpicgames color={theme.colors.secondary} size={35} />
-        </StyledHeaderMol>
+        </StyledHeaderMol>       
+        <NavSidebar isSidebarOpen={hasToggleSidebar} setIsSidebarOpenProps={setHasToggleSidebar}  />
         </>
       )}
       renderElse={() => (

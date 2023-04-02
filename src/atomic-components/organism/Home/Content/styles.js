@@ -1,17 +1,13 @@
 import styled from "styled-components";
 
 export const StyledHomeContent = styled.div`
-  width: 75%;
+  width: ${({ isMobile }) => isMobile ? '100%' : '75%'};
 `;
 
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-`
-
-export const Container = styled.div`
-  margin-left: 8px;
 `
 
 export const StyledCarHomeCarousel = styled.div`
@@ -26,4 +22,10 @@ export const Column = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+`
+
+export const CarouselContainer = styled.div`
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 `

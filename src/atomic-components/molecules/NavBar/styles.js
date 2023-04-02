@@ -11,7 +11,8 @@ export const StyledHeaderMol = styled.header`
   padding: 10px 15px;
   position: relative;
   min-width: 100px;
-
+  z-index: 100;
+  
   ${({ isMobile, hasSameHeight }) => isMobile && hasSameHeight 
       ? css`
         justify-content: space-between;

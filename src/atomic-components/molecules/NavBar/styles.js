@@ -9,7 +9,6 @@ export const StyledHeaderMol = styled.header`
   justify-content: space-around;
   background-color: ${({ theme }) => theme.colors.black};
   padding: 10px 15px;
-  z-index: 100px;
   position: relative;
   min-width: 100px;
 

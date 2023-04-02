@@ -40,8 +40,8 @@ const NavBar = ({ heightProps, setHasToggleSidebarProps }) => {
     }
   }, [scrollPosition])
 
-  const onHandleToggleSidebar = () => {
-    setHasToggleSidebar(!hasToggleSidebar)
+  const onHandleToggleSidebar = (open) => {
+    setHasToggleSidebar(open)
   }
 
   return (

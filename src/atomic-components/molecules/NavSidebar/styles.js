@@ -1,12 +1,10 @@
 import styled, { css } from "styled-components";
 
 export const StyledNavSidebar = styled.div`
-  /* display: none;
-  margin-left: -299px; */
   display: flex;
   flex-direction: row;
   min-width: 80%;
-  min-height: 100px;
+  min-height: 100vh;
   background-color: ${({ theme }) => theme.colors.black};  
   min-height: 100%;
   display: none;
@@ -16,11 +14,10 @@ export const StyledNavSidebar = styled.div`
     && css`
       display: block;
       position: absolute;
-      top: 0;
-      margin-left: 0;`  
+      top: 0px;
+      ;`  
   }
-  transition: all 1s;
-  /* transform: translateZ(0); */
+  z-index: 1000;
 `
 
 export const Content = styled.div`

@@ -11,14 +11,12 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 function HomeHeader() {
-  const [isSidebarOpen, setIsSidebarOper] = useState()
+  const [isSidebarOpen, setIsSidebarOpen] = useState()
 
   const { width } = useWindowDimensions()
   const { isMobile } = useDeviceDetect()
 
   const heightProps = width / 1.8;
-
- console.log(isSidebarOpen)
   
   return (
     <StyledHomeHeader>
@@ -27,8 +25,8 @@ function HomeHeader() {
         render={() => (
           <>
             <ImagesCarousel isSidebarOpen={isSidebarOpen} dataSlider={dataSlider} width={width}  />
-            <NavBar heightProps={heightProps} isSidebarOpen={isSidebarOpen} setHasToggleSidebarProps={setIsSidebarOper} /> 
-            <NavSidebar isSidebarOpen={isSidebarOpen} />
+            <NavBar heightProps={heightProps} isSidebarOpen={isSidebarOpen} setHasToggleSidebarProps={setIsSidebarOpen} /> 
+            <NavSidebar isSidebarOpen={isSidebarOpen} setHasToggleSidebarProps={setIsSidebarOpen} />
           </>
         )}
         renderElse={() => (

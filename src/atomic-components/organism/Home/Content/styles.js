@@ -8,7 +8,6 @@ export const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  z-index: 10;
 `
 
 export const Container = styled.div`

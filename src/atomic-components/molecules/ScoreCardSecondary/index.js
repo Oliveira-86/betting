@@ -39,9 +39,30 @@ function ScoreCardSecondary({
           <Time variant='grey' time={time} />
       </Row>
       <Row>
-        <Badge centered widthProps='28%' heightProps='30px' variant='ice'><Text small>{bet[0]}</Text></Badge>
-        <Badge centered widthProps='28%' heightProps='30px' variant='ice'><Text small>{bet[1]}</Text></Badge>
-        <Badge centered widthProps='28%' heightProps='30px' variant='ice'><Text small>{bet[2]}</Text></Badge>
+        <Badge 
+          centered 
+          widthProps='28%' 
+          heightProps='30px' 
+          textVariant='grey_strong' 
+          name={bet[0]} 
+          variant='ice' 
+        />
+        <Badge 
+          centered 
+          widthProps='28%' 
+          heightProps='30px' 
+          textVariant='grey_strong' 
+          name={bet[1]} 
+          variant='ice' 
+        />
+        <Badge 
+          centered 
+          widthProps='28%' 
+          heightProps='30px' 
+          textVariant='grey_strong' 
+          name={bet[2]} 
+          variant='ice' 
+        />
       </Row>
     </StyledScoreCardSecondary>
   )

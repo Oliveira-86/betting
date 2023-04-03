@@ -35,9 +35,30 @@ function ScoreCard({
         </Column>
       </Row>
       <Row marginTop>
-        <Badge centered widthProps='33%' paddingProps='5px' variant='ice'><Text small>1.8</Text></Badge>
-        <Badge centered widthProps='33%' paddingProps='5px' variant='ice'><Text small>1.8</Text></Badge>
-        <Badge centered widthProps='33%' paddingProps='5px' variant='ice'><Text small>1.8</Text></Badge>
+        <Badge 
+          centered 
+          widthProps='33%' 
+           textVariant='grey_strong'
+           paddingProps='3px 5px' 
+           variant='ice' 
+           name='1.8'
+          />
+        <Badge 
+          centered 
+          widthProps='33%' 
+          textVariant='grey_strong' 
+          paddingProps='3px 5px' 
+          variant='ice' 
+          name='1.8'
+        />
+        <Badge 
+          centered 
+          widthProps='33%' 
+          textVariant='grey_strong' 
+          paddingProps='3px 5px' 
+          variant='ice' 
+          name='1.8'
+        />
       </Row>
     </StyledScoreCard>
   )

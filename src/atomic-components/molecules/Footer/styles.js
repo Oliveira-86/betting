@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { StyledLink } from "../../atoms/Link/styles";
 
 export const ItemContainer = styled.footer`
@@ -16,6 +16,10 @@ export const StyledFooter = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
   padding-bottom: 50px;
   margin-top: 30px;
+
+  ${({ isMobile }) => isMobile && css`
+    padding: 20px 20px 50px 20px;
+  `}
 `
 
 export const Link = styled.a`

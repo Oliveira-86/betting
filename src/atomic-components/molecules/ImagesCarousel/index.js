@@ -80,18 +80,16 @@ function ImagesCarousel({ isSidebarOpen, title, swicth, dataSlider, list }, prop
               <If 
                 condition={isMobile}
                 render={() => dataSlider?.map((item, index) =>  (
-                      <>
-                        <StyledBanner slideIndex={slideIndex === index + 1} isMobile={isMobile}>        
-                          <Image key={item.id} src={item.src} alt='banner shoes' />   
-                        </StyledBanner>
-                      </>
+                      <StyledBanner slideIndex={slideIndex === index + 1} isMobile={isMobile}>        
+                        <Image key={item.id} src={item.src.mobile} alt='banner shoes' />   
+                      </StyledBanner>
                     ))}
                     
                 renderElse={() => (
                     dataSlider?.map((item, index) =>  (  
                       <>
                         <StyledBanner slideIndex={slideIndex === index + 1} isMobile={!isMobile}>       
-                          <Image shadow key={item.id}  src={item.src} alt='banner shoes' />   
+                          <Image shadow key={item.id}  src={item.src.web} alt='banner shoes' />   
                         </StyledBanner>
                       </>
                     ))

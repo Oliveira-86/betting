@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { StyledCard } from "../../atoms/Card/styles";
 
 export const StyledTableRow = styled(StyledCard)`
@@ -7,6 +7,13 @@ export const StyledTableRow = styled(StyledCard)`
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+
+  ${({ isMobile }) => isMobile && css`
+     margin-bottom: 0px;
+     border-radius: 0px;
+     border-left: none;
+     border-right: none;
+  `}
 `
 
 export const StyledTableItem = styled.div`
@@ -17,6 +24,11 @@ export const StyledTableItem = styled.div`
   margin-top: 5px;
   border-bottom: 0.3px solid ${({ theme }) => theme.colors.ice};
   padding-bottom: 8px;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.ice};
+  }
+  
 `
 
 
@@ -34,3 +46,10 @@ export const Row = styled.div`
   align-items: center;
   justify-content: space-between;
 `
+
+export const StyledTitle = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;

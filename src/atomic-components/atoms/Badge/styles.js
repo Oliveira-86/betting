@@ -6,13 +6,18 @@ export const StyledBadge = styled.div`
   border-radius: 8px;
   border: 1 solid ${({ theme }) => theme.colors.grey_strong};
   cursor: pointer;
+  padding: 5px 8px;
   
   ${({ theme, variant }) => {
     switch(variant) {
+      case 'white':
+       return `background-color: ${theme.colors.white}`
       case 'ice':
        return `background-color: ${theme.colors.ice}`
       case 'grey':
        return `background-color: ${theme.colors.grey}`
+      case 'grey_light':
+       return `background-color: ${theme.colors.grey_light}`
       case 'black':
        return `background-color: ${theme.colors.black}`
       case 'secondary':

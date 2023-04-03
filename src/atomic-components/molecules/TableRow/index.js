@@ -1,21 +1,38 @@
 import React from 'react'
 import Badge from '../../atoms/Badge'
 import { Text, Title } from '../../atoms/Text'
-import { StyledTableRow, StyledTableItem, Column, Row } from './styles'
+import { StyledTableRow, StyledTableItem, Column, Row, StyledTitle } from './styles'
 import { BiTimeFive } from 'react-icons/bi'
 import theme from '../../../global/styles/theme'
+import Switch from '../../atoms/Switch'
+import useDeviceDetect from '../../../hook/useDeviceDetect'
 
-const TableRow = ({ heading, tableRowData }) => {
+const TableRow = ({ heading, tableRowData, swicth }) => {
+  const { isMobile } = useDeviceDetect()
+
   return (
-    <StyledTableRow>
-      <Title 
-        level={2}
-        verticalMargin={'20px'} 
-        variant='grey'       
-        style={{ padding: 10 }}
-      >
-        {heading}
-      </Title> 
+    <StyledTableRow isMobile={isMobile}>
+       {heading && (
+          <StyledTitle>
+            <Title 
+              level={2}
+              verticalMargin={'20px'} 
+              variant='grey'   
+            >
+              {heading}
+            </Title>
+          </StyledTitle>    
+        )}
+        {swicth 
+          ? (
+              <StyledTitle style={{ marginBottom: 20}}>
+                <Text MarginRight={'5px'} small bold variant='grey'>
+                  AO VIVO
+                </Text>
+                <Switch />
+              </StyledTitle>
+            ) 
+        : null}
       {tableRowData?.map((item) =>  (  
           <StyledTableItem key={item.id}>
             <Column>
@@ -27,14 +44,10 @@ const TableRow = ({ heading, tableRowData }) => {
                   <Text variant='grey' bold xsmall>{item.team2}</Text>   
                   {item.goals.team2 && <Text variant='grey' bold>{item.goals.team2}</Text>}
                 </Row>
-                <Row style={{ width: '30%' }}>
+                <Row style={{ width: isMobile ? '60%'  :'30%' }}>
                   <Text variant='grey' xxsmall>{item.time.hour}</Text>
                   {item.time.live && 
-                    <Badge centered  paddingProps='2px' variant='secondary'>
-                      <Text variant={'white'} xxsmall>
-                        ao vivo
-                      </Text>
-                    </Badge>
+                    <Badge centered  paddingProps='2px' variant='secondary' name='ao vivo' textVariant='white' xxsmall />
                   }
                 </Row>
             </Column>
@@ -42,9 +55,9 @@ const TableRow = ({ heading, tableRowData }) => {
               {!item.goals.team1 && <BiTimeFive size={25} color={theme.colors.grey} />}
             </Row>
             <Row style={{ width: '130%' }}>
-              <Badge centered widthProps='28%' heightProps='60%' variant='ice'><Text small>{item.bet[0]}</Text></Badge>
-              <Badge centered widthProps='28%' heightProps='60%' variant='ice'><Text small>{item.bet[1]}</Text></Badge>
-              <Badge centered widthProps='28%' heightProps='60%' variant='ice'><Text small>{item.bet[2]}</Text></Badge>
+              <Badge centered widthProps='28%' heightProps='60%' variant='ice' name={item.bet[0]} />
+              <Badge centered widthProps='28%' heightProps='60%' variant='ice' name={item.bet[1]} />
+              <Badge centered widthProps='28%' heightProps='60%' variant='ice' name={item.bet[2]} />
             </Row>       
         </StyledTableItem>
       ))}

@@ -40,7 +40,7 @@ export const Row = styled.div`
 
 export const BgShadow = styled.div`
   min-width: 100%;
-  min-height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0px;
@@ -49,8 +49,8 @@ export const BgShadow = styled.div`
   ${({ isOpen }) => isOpen 
     && css`
       display: block;
-      position: absolute;
-      top: 0;
-      margin-left: 0;`  
+      position: fixed;
+      top: 0px;
+      z-index: 1000;`  
   }
 `

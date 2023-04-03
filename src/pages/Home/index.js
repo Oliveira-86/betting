@@ -1,10 +1,10 @@
 import React from 'react'
+import { SPORTS_CATEGORY } from '../../api/sports'
 import HomeTemplate from '../../atomic-components/templates/Home'
-import useSizeElement from '../../hook/useSizeElement'
 
 const Home = () => {
  
-  return <HomeTemplate />
+  return <HomeTemplate sportsCategory={SPORTS_CATEGORY} />
 }
 
 export default Home

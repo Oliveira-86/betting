@@ -14,7 +14,7 @@ import useDeviceDetect from '../../../hook/useDeviceDetect'
 import ScoreCard from '../ScoreCard'
 
 
-function SportsCarousel({ hasArrow, list }, props, ref) {
+function FilterCarousel({ hasArrow, list }, props, ref) {
   const [hasEndLeft] = useState(true)
   const { isMobile } = useDeviceDetect()
 
@@ -70,4 +70,4 @@ function SportsCarousel({ hasArrow, list }, props, ref) {
   )
 }
 
-export default SportsCarousel
+export default FilterCarousel

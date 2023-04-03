@@ -9,7 +9,7 @@ export const StyledHeaderMol = styled.header`
   justify-content: space-around;
   background-color: ${({ theme }) => theme.colors.black};
   padding: 10px 15px;
-  position: relative;
+  position: ${({ isMobile }) => isMobile ? 'relative' : 'fixed'};
   min-width: 100px;
   z-index: 100;
   

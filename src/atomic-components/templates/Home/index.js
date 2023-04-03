@@ -111,7 +111,7 @@ const DATA = [
   },
   ];
 
-function HomeTemplate() {
+function HomeTemplate({ sportsCategory }) {
   
   const { isMobile } = useDeviceDetect()
 
@@ -119,7 +119,7 @@ function HomeTemplate() {
     <>
       <StyledHomeTemplate>
         <HomeHeader />
-        <HomeContent sportsList={DATA} />
+        <HomeContent sportsCategory={sportsCategory} sportsList={DATA} />
       </StyledHomeTemplate>
       {isMobile ? <BottomBar /> : null}
       

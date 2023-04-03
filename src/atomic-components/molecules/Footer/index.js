@@ -23,32 +23,32 @@ const Footer = () => {
     content8 
   }) => (
     <ItemContainer>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }} first href='www'>
-        <Text big={!isMobile} bold variant='white'>{heading}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }} first href='www'>
+        <Text big bold variant='white'>{heading}</Text>
       </Link>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }}  href='www'>
-        <Text xsmall={isMobile} variant='white'>{content1}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }}  href='www'>
+        <Text variant='white'>{content1}</Text>
       </Link>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }} href='www'>
-        <Text xsmall={isMobile} variant='white'>{content2}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }} href='www'>
+        <Text variant='white'>{content2}</Text>
       </Link>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }} href='www'>
-        <Text xsmall={isMobile} variant='white'>{content3}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }} href='www'>
+        <Text variant='white'>{content3}</Text>
       </Link>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }} href='www'>
-        <Text xsmall={isMobile} variant='white'>{content4}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }} href='www'>
+        <Text variant='white'>{content4}</Text>
       </Link>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }} href='www'>
-        <Text xsmall={isMobile} variant='white'>{content5}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }} href='www'>
+        <Text variant='white'>{content5}</Text>
       </Link>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }} href='www'>
-        <Text xsmall={isMobile} variant='white'>{content6}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }} href='www'>
+        <Text variant='white'>{content6}</Text>
       </Link>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }} href='www'>
-        <Text xsmall={isMobile} variant='white'>{content7}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }} href='www'>
+        <Text variant='white'>{content7}</Text>
       </Link>
-      <Link style={{ marginBottom: isMobile ? 0 : 5 }} href='www'>
-        <Text xsmall={isMobile} variant='white'>{content8}</Text>
+      <Link style={{ marginBottom: isMobile ? 3 : 5 }} href='www'>
+        <Text variant='white'>{content8}</Text>
       </Link>
     </ItemContainer>
   )
@@ -60,37 +60,56 @@ const Footer = () => {
         render={() => (
           <StyledFooter isMobile={isMobile}>
             <div style={{ width: '100%', height: 1,  marginBottom: 20, marginTop: 10, backgroundColor: theme.colors.secondary }} />
-            <ItemContent 
-              heading='Esportes'
-              content1='Apostas Esportivas'
-              content2='Futebol'
-              content3='Basquete'
-              content4='Hóquei'
-              content5='Boxe'
-            />
-            <ItemContent 
-              heading='Promoções'
-              content1='Esportivas'
-              content2='Casino'
-              content3='Bingo'
-            />
-            <ItemContent 
-              heading='Links corporativos'
-              content1='Programas de afiliados'
-              content2='Carreras'
-              content3='Investors'
-            />
-            <ItemContent 
-              heading='Quem somos'
-              content1='Quem somos'
-              content2='Contato'
-              content3='Política de uso'
-            />
-            <Row>
-              <BsLinkedin color={theme.colors.white} size={25} />
-              <BsFacebook color={theme.colors.white} size={25} />
-              <BsInstagram color={theme.colors.white} size={25} />
+              <ItemContent 
+                heading='Esportes'
+                content1='Apostas Esportivas'
+                content2='Futebol'
+                content3='Basquete'
+                content4='Hóquei'
+                content5='Boxe'
+                content6='Natação'
+                content7='Outros esportes'
+              />
+              <ItemContent 
+                heading='Promoções'
+                content1='Esportivas'
+                content2='Casino'
+                content3='Bingo'
+              />
+              <ItemContent 
+                heading='Links corporativos'
+                content1='Programas de afiliados'
+                content2='Carreras'
+                content3='Investors'
+              />
+              <ItemContent 
+                heading='Quem somos'
+                content1='Quem somos'
+                content2='Contato'
+                content3='Política de uso'
+              />
+            <Text big bold style={{ alignSelf: 'center', color: theme.colors.ice, marginBottom: 10, marginTop: 40 }}>Patricionadores</Text>
+            <Row style={{ width: isMobile ? '100%' : '25%', alignSelf: 'center' }}>
+              <Column>
+                <SiPremierleague color={theme.colors.ice} size={50} />
+                <Text style={{ marginTop: 10 }} bold small variant='ice'>Premier League</Text>
+              </Column>
+              <Column>
+                <SiMlb color={theme.colors.ice} size={50} />
+                <Text style={{ marginTop: 10 }} bold small variant='ice'>Major League Baseball</Text>
+              </Column>
             </Row>
+            <Row style={{ width: '100%', alignSelf: 'center', padding: 20 }}>
+              <BsLinkedin color={theme.colors.ice} size={25} />
+              <BsFacebook color={theme.colors.ice} size={25} />
+              <BsInstagram color={theme.colors.ice} size={25} />
+            </Row>
+            <Text small variant='ice' style={{ width: '100%', alignSelf: 'center', padding: 20 }}>
+              Usamos cookies e cookies de terceiros para melhorar nossos serviços, 
+              analisar e personalizar suas preferências e para exibir anúncios.
+              Se você continuar com a navegação, consideraremos que aceita seu uso. 
+              Você pode alterar as configurações e obter mais informações em nossa 
+            </Text>
           </StyledFooter>
         )}
         renderElse={() => (

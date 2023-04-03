@@ -7,7 +7,7 @@ function Image(props) {
 
   return  (
     <>
-      <StyledImage borderRadius={isMobile} style={props.style}  {...props} src={props.src} alt={props.alt} />
+      <StyledImage isMobile={isMobile} borderRadius={isMobile} style={props.style}  {...props} src={props.src} alt={props.alt} />
       {props.shadow && <Shadow style={props.style} />}
     </>
     )

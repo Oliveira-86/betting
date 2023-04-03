@@ -9,8 +9,11 @@ import SportsBarside from '../../../molecules/SportsBarside';
 import SportsColumn from '../../../molecules/SportsColumn';
 import { If } from '../../../atoms/if';
 import useDeviceDetect from '../../../../hook/useDeviceDetect';
+import FilterCarousel from '../../../molecules/FilterCarousel';
+import Image from '../../../atoms/Image';
+import vertical_banner from '../../../../assets/vertical_banner.jpg'
 
-function HomeContent({ sportsList, tableRowData }) {
+function HomeContent({ sportsList, sportsCategory }) {
   const { isMobile } = useDeviceDetect()
   
   return (
@@ -20,39 +23,31 @@ function HomeContent({ sportsList, tableRowData }) {
       render={() => (
         <StyledHomeContent isMobile={isMobile}>
           <SportsCarousel list={sportsList} />
-          <SportsCarousel list={sportsList} />
-          {/* <Row>
-            <SportsBarside style={{ width: '20%', marginRight: 10 }} heading='Esportes' />
-            <Column style={{ width: '60%', marginRight: 10 }}>
+          <FilterCarousel sportsCategory={sportsCategory} />
+          <Row>
+            <Column style={{ width: '100%' }}>
               <TableRow 
                 tableRowData={SPORTS}
-                heading='Ao vivo'
+                heading='Destaques'
+                swicth
               /> 
               <TableRow 
                 tableRowData={NEXT_GAMES}
                 heading='Próximos Jogos'
               />  
             </Column>
-            <Column style={{ width: '30%'}}>
-              <SportsColumn 
-                tableRowData={SPORTS}
-                heading='Destaques'
-              />  
-            </Column>  
-          </Row> */}
-          <Card centered >
-            {/* <Banner style={{ marginTop: 25, marginBottom: 25, borderRadius: 8, alignSelf: 'center' }} widthProps='280px'  src={bannerImage} alt='banner' /> */}
-          </Card>
-          <Button style={{ width: '90%', marginLeft: 13, marginBottom: 25 }} variant='secondary' label='Aposte agora!!' textVariant='white' />
+          </Row> 
+          <Button style={{ width: '90%', marginLeft: 13, marginBottom: 15, marginTop: 15 }} variant='secondary' label='VER TODOS OS EVENTOS' textVariant='white' /> 
+          <Image src={vertical_banner} style={{ width: '90%', borderRadius: 8, marginTop: 10, marginLeft: 18 }}  /> 
         </StyledHomeContent>
       )}
       renderElse={() => (
-        <StyledHomeContent isMobile={isMobile}>
+        <StyledHomeContent>
           <Row>
             <SportsCarousel hasArrow list={sportsList} />
           </Row>
           <Row>
-            <SportsBarside style={{ width: '20%', marginRight: 10 }} heading='Esportes' />
+            <SportsBarside style={{ width: '20%', marginRight: 10 }} heading='Esportes' sportsCategory={sportsCategory} />
             <Column style={{ width: '60%', marginRight: 10 }}>
               <TableRow 
                 tableRowData={SPORTS}

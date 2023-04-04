@@ -13,12 +13,12 @@ export const StyledCarousel = styled.div`
 `;
 
 export const Row = styled.div`
-  max-width: 75%;
+  max-width: ${({ fully }) => fully ? '100%' : '75%'};
   height: 375px;
   margin: 100px auto 0;
   position: relative;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: ${({ fully }) => fully ? '0px' : '25px'};
 
   ${({ isMobile }) => isMobile && css`
     max-width: 100%;

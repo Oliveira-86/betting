@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 
 export const StyledImage = styled.img`
-  /* ${({ widthProps }) => widthProps && css`
+   ${({ widthProps }) => widthProps && css`
     width: ${widthProps};
   `};
   ${({ heightProps }) => heightProps && css`
@@ -10,7 +10,7 @@ export const StyledImage = styled.img`
   `};
   ${({ borderRadius }) => borderRadius && css`
     border-radius: ${borderRadius};
-  `};*/
+  `};
 
   ${({ isMobile }) => isMobile && css` 
     width: 100%;

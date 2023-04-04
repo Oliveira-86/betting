@@ -3,12 +3,13 @@ import { devices } from "../../../global/styles/devices";
 
 export const StyledInput = styled.div`
   width: 100%;
-  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
   ${({ margintop }) => margintop && css`
-    margin-top: ${margintop};s
+    margin-top: ${margintop};
   `};
   ${({ marginBottom }) => marginBottom && css`
-    margin-bottom: ${marginBottom};s
+    margin-bottom: ${marginBottom};
   `};
 `;
 
@@ -19,7 +20,7 @@ export const InputStyle = styled.input`
   color: ${({ theme }) => theme.colors.black};
   background-color: ${({ theme }) => theme.colors.ice};
   border: none;
-  border-radius: 15px;
+  border-radius: 0px 15px 15px 0px;
   width: 100%;
 
   &:focus {
@@ -46,13 +47,10 @@ export const InputStyle = styled.input`
 `;
 
 export const StyledSearch = styled.div`
-  position: absolute;
   display: flex;
-  align-items: end;
-  justify-content: end;
-  padding: 10px 0px 5px 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  right: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 0px 0px 15px;
+  background-color:${({ theme }) => theme.colors.ice};
+  padding-left: 8px;
 `;

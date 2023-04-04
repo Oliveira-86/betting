@@ -10,11 +10,9 @@ const Input = (props) => {
   return (
     <>
       <StyledInput {...props}>
-        {!isFocus && (
-          <StyledSearch {...props}>
-            <BiSearch size={25} />
-          </StyledSearch>
-        )}
+        <StyledSearch>
+          <BiSearch size={25} />
+        </StyledSearch>
         <InputStyle
           {...props}
           onFocus={() => setIsFocus(true)}

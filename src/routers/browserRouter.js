@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
-import Live from "../pages/Live";
+import Casino from "../pages/Casino";
 
 export const routers = createBrowserRouter([
   {
@@ -8,7 +8,7 @@ export const routers = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/aovivo",
-    element: <Live />,
+    path: "/cassino",
+    element: <Casino />,
   },
 ]);

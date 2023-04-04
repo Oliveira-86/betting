@@ -8,6 +8,7 @@ import { SiEpicgames } from 'react-icons/si'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import theme from '../../../global/styles/theme'
 import NavSidebar from '../NavSidebar'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -17,6 +18,8 @@ const NavBar = ({ heightProps, setHasToggleSidebarProps }) => {
   const { isMobile } = useDeviceDetect()
   
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -64,7 +67,7 @@ const NavBar = ({ heightProps, setHasToggleSidebarProps }) => {
             <Link variant='secondary' bold>
               Ao vivo
             </Link>
-            <Link variant='secondary' bold>
+            <Link onClick={() => navigate("/cassino")} variant='secondary' bold>
               Cassino
             </Link>
             <Link variant='secondary' bold>

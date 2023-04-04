@@ -10,7 +10,7 @@ import { If } from '../../atoms/if'
 import aviator_banner from '../../../assets/aviator.jpg'
 
 
-function ImagesCarousel({ isSidebarOpen, title, swicth, dataSlider, list }, props, ref) {
+function ImagesCarousel({ isSidebarOpen, title, swicth, dataSlider, fully }, props, ref) {
   const [slideIndex, setSlideIndex] = useState(1)
 
   const { isMobile } = useDeviceDetect()
@@ -76,7 +76,7 @@ function ImagesCarousel({ isSidebarOpen, title, swicth, dataSlider, list }, prop
         )}   
 
         <StyledScroll>
-            <Row isMobile={isMobile}>
+            <Row fully={fully} isMobile={isMobile}>
               <If 
                 condition={isMobile}
                 render={() => dataSlider?.map((item, index) =>  (
@@ -88,15 +88,19 @@ function ImagesCarousel({ isSidebarOpen, title, swicth, dataSlider, list }, prop
                 renderElse={() => (
                     dataSlider?.map((item, index) =>  (  
                       <>
+                      {fully ? (
+                          <Image widthProps='100%'  shadow key={item.id}  src={item.src.casino} alt='banner shoes' />   
+                      ) : (
                         <StyledBanner slideIndex={slideIndex === index + 1} isMobile={!isMobile}>       
-                          <Image shadow key={item.id}  src={item.src.web} alt='banner shoes' />   
+                          <Image widthProps='100%'  shadow key={item.id}  src={item.src.web} alt='banner shoes' />   
                         </StyledBanner>
+                      )}
                       </>
                     ))
                     )}
               /> 
              {!isSidebarOpen && (
-              <StyledArrow>
+                <StyledArrow>
                   <PrevButton isMobile={isMobile} {...props}>
                     <MdChevronLeft onClick={slideLeft} size={40} color={theme.colors.ice} />
                   </PrevButton>

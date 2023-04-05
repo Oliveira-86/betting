@@ -22,12 +22,12 @@ export const StyledTableItem = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 5px;
-  border-bottom: 0.3px solid ${({ theme }) => theme.colors.ice};
+  border-bottom: 0.1px solid ${({ theme }) => theme.colors.dark_seconday};
   padding-bottom: 8px;
 
-  &:hover {
+  /* &:hover {
     background-color: ${({ theme }) => theme.colors.ice};
-  }
+  } */
   
 `
 

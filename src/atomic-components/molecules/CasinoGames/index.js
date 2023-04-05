@@ -8,7 +8,7 @@ import useDeviceDetect from '../../../hook/useDeviceDetect'
 import Image from '../../atoms/Image'
 
 
-function CasinoGames({ hasArrow, title, swicth, casinoGames, slide }, props, ref) {
+function CasinoGames({ title, swicth, casinoGames, slide }, props, ref) {
   const [slideIndex, setSlideIndex] = useState(1)
 
   const { isMobile } = useDeviceDetect()
@@ -36,7 +36,7 @@ function CasinoGames({ hasArrow, title, swicth, casinoGames, slide }, props, ref
           <StyledTitle>
             <Title 
               verticalMargin={'25px'} 
-              variant='dark' 
+              variant='ice' 
               level={1}
               >
               {title}
@@ -65,10 +65,10 @@ function CasinoGames({ hasArrow, title, swicth, casinoGames, slide }, props, ref
             <Row isMobile={isMobile} id={slide}>
               {casinoGames?.map((item, index) =>  (
                 <Column>
-                  <ImageContainer>
-                    <Image src={item.src} style={{ borderRadius: 8, height: 200 }} />
+                  <ImageContainer isMobile={isMobile}>
+                    <Image src={item.src} style={{ borderRadius: isMobile ? 5 : 10, height: isMobile ? 120 : 220, width: isMobile ? 120 : '' }} />
                   </ImageContainer>
-                  <Text bold style={{ marginTop: 5, marginBottom: 5 }}>{item.title}</Text>
+                  <Text bold variant='ice' style={{ marginTop: 5, marginBottom: 5 }}>{item.title}</Text>
                   <Text xsmall variant='secondary'>{item.provider}</Text>
                 </Column>
                 )

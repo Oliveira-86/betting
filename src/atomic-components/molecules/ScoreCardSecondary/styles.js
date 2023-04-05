@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const StyledScoreCardSecondary = styled.div`
   padding: 15px;
-  border: 2px solid ${({ theme }) => theme.colors.ice};
+  border: 2px solid ${({ theme }) => theme.colors.background};
   border-radius: 8px;
   margin-bottom: 10px;
 `;

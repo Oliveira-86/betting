@@ -3,14 +3,18 @@ import { Text, Title } from '../../atoms/Text'
 import { StyledBarside, SyledSportsBarsides, StyledItem } from './styles'
 import Image from '../../atoms/Image'
 import vertical_banner from '../../../assets/vertical_banner.jpg'
+import useWindowDimensions from '../../../hook/useWindowDimensions'
 
 const SportsBarside = ({ heading, style, sportsCategory }) => {
   const [activeIndex, setActiveIndex] = useState(false)
 
+  const windowDimensions  = useWindowDimensions()
+  const { width } = windowDimensions
+
   const Item = ({ icon, name, onClick, active, variant }) => (
       <StyledItem active={active} onClick={onClick}>
         {icon}
-        <Text bold variant={variant} style={{ marginLeft: 20 }}>
+        <Text small={width <= 1200} bold variant={variant} style={{ marginLeft: 20 }}>
           {name}
         </Text>
       </StyledItem>

@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    background-color: ${({ theme }) => theme.colors.ice};
+    background-color: ${({ theme }) => theme.colors.black};
     font-family: 'Roboto', Helvetica, sans-serif;
   }
   * {

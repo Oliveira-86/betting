@@ -21,7 +21,7 @@ function FilterCarousel() {
                   <Badge 
                     centered name={item.name} 
                     textVariant={activeIndex === index ? 'white' : 'grey_strong'}
-                    variant={activeIndex === index ? '' : 'ice'}  
+                    variant={activeIndex === index ? 'secondary' : 'ice'}  
                   />  
                 </StyledBanner>
               ))}

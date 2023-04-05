@@ -11,7 +11,7 @@ const Input = (props) => {
     <>
       <StyledInput {...props}>
         <StyledSearch>
-          <BiSearch size={25} />
+          <BiSearch size={25} color={theme.colors.ice} />
         </StyledSearch>
         <InputStyle
           {...props}

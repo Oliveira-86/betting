@@ -22,41 +22,41 @@ function ScoreCard({
       <Row>
         <Column>
           <img style={{ width: 48, height: 48 }} src={logo1} alt={altTeam1} />
-          <Text textAlign={'center'} MarginTop={'5px'} xsmall bold>{nameTeam1}</Text>
+          <Text variant='ice' textAlign={'center'} MarginTop={'5px'} xsmall bold>{nameTeam1}</Text>
         </Column>
         <Column justifyContent>
-          <Text xsmall variant='grey'>{league}</Text>
-          <Title>{goalsTeam1} : {goalsTeam2}</Title>
-          <Time dot time={time} />
+          <Text xsmall variant='ice'>{league}</Text>
+          <Title variant='ice'>{goalsTeam1} : {goalsTeam2}</Title>
+          <Time variant='ice' time={time} />
         </Column>
         <Column>
           <img style={{ width: 48, height: 48 }}  src={logo2} alt={altTeam2} />
-          <Text textAlign={'center'} MarginTop={'5px'} xsmall bold>{nameTeam2}</Text>
+          <Text variant='ice' textAlign={'center'} MarginTop={'5px'} xsmall bold>{nameTeam2}</Text>
         </Column>
       </Row>
       <Row marginTop>
         <Badge 
           centered 
           widthProps='33%' 
-           textVariant='grey_strong'
+           textVariant='ice'
            paddingProps='3px 5px' 
-           variant='ice' 
+           variant='black' 
            name='1.8'
           />
         <Badge 
           centered 
           widthProps='33%' 
-          textVariant='grey_strong' 
+          textVariant='ice' 
           paddingProps='3px 5px' 
-          variant='ice' 
+          variant='black' 
           name='1.8'
         />
         <Badge 
           centered 
           widthProps='33%' 
-          textVariant='grey_strong' 
+          textVariant='ice' 
           paddingProps='3px 5px' 
-          variant='ice' 
+          variant='black' 
           name='1.8'
         />
       </Row>

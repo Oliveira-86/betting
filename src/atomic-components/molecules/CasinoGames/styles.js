@@ -5,7 +5,7 @@ export const StyledCarousel = styled.div`
     height: 100%;
     padding-left: 20px;
     padding-bottom: 25px;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.background};
     border-bottom: .8px solid ${({ theme }) => theme.colors.grey_light};
 `;
 
@@ -65,14 +65,17 @@ export const StyledTitle = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  border-radius: 10px;
+  padding-top: 5px;
+  border-radius: ${({ isMobile }) => isMobile ? '5px' : '10px'};
   margin-right: 8px;
   cursor: pointer;
   transition: transform .2s;
   background-color: ${({ theme }) => theme.colors.blue};
 
   &:hover {
-    transform: scale(1.02); 
+    transform: scale(1.02);
+    /* border-radius: 12px; */
+    
   }
 `
 

@@ -11,6 +11,7 @@ const Button = (props) => {
         <Text variant={props.textVariant} bold={props.bold}>
           {!props.isLoading ? props.label : <BeatLoader  color={theme.colors.background} size={10} />}
         </Text>
+        {props.children}
       </StyledButton>
     );
   };

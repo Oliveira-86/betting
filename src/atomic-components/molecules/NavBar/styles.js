@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { StyledLink } from "../../atoms/Link/styles";
 
 export const StyledHeaderMol = styled.header`
   overflow-y: hidden;
@@ -7,7 +8,7 @@ export const StyledHeaderMol = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.background};
   padding: 10px 15px;
   position: ${({ isMobile }) => isMobile ? 'relative' : 'fixed'};
   min-width: 100px;
@@ -32,4 +33,7 @@ export const Row = styled.nav`
   align-items: center;
   justify-content: space-between;
   width: ${({ widthProps }) => widthProps};
+`
+export const ItemContainer = styled(StyledLink)`
+
 `

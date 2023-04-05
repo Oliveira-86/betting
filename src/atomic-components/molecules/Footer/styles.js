@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { StyledCard } from "../../atoms/Card/styles";
 import { StyledLink } from "../../atoms/Link/styles";
 
 export const ItemContainer = styled.footer`
@@ -29,7 +30,7 @@ export const Link = styled.a`
   margin-top: ${({ first }) => first && '20px'};
 `
 
-export const Row = styled(Link)`
+export const Row = styled.div`
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -42,4 +43,20 @@ export const Column = styled(StyledLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+export const Dropdown = styled(StyledCard)`
+  width: 200px;
+  align-self: center;
+  color:${({ theme }) => theme.colors.secondary};
+  display: flex;
+  align-items: center; 
+  padding: 8px; 
+  margin-top: -8px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 `

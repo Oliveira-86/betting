@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const StyledNavSidebar = styled.div`
   display: flex;
   flex-direction: row;
-  min-width: 80%;
+  min-width: ${({ hasSmallWidth }) => hasSmallWidth ? '50%' : '80%'};
   background-color: ${({ theme }) => theme.colors.black};  
   height: 100vh;
   overflow-y: hidden;

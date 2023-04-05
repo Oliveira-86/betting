@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { SiEpicgames } from 'react-icons/si'
 import theme from '../../../global/styles/theme'
+import useDeviceDetect from '../../../hook/useDeviceDetect'
 import { Button } from '../../atoms/Button'
 import Link from '../../atoms/Link'
 import { StyledNavSidebar, Content, Row, BgShadow  } from './styles'
 
-const NavSidebar = ({ isSidebarOpen, setIsSidebarOpenProps }) => {
+const NavSidebar = ({ isSidebarOpen, setIsSidebarOpenProps, hasSmallWidth }) => {
   const [hasToggleSidebar, setHasToggleSidebar] = useState(null)
+  const { isMobile } = useDeviceDetect()
 
   useEffect(() => {
     setHasToggleSidebar(isSidebarOpen)
@@ -20,7 +22,7 @@ const NavSidebar = ({ isSidebarOpen, setIsSidebarOpenProps }) => {
   return (
     <>
       <BgShadow isOpen={hasToggleSidebar} onClick={onHandleSideBar}/>
-      <StyledNavSidebar isOpen={hasToggleSidebar}>
+      <StyledNavSidebar hasSmallWidth={hasSmallWidth && !isMobile} isOpen={hasToggleSidebar}>
         <Content> 
           <SiEpicgames color={theme.colors.secondary} size={45} />
           <Row>

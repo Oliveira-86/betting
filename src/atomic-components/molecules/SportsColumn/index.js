@@ -44,21 +44,21 @@ const SportsColumn = ({ heading, tableRowData }) => {
           ))}
           </StyledSportsColumn>
           <Card style={{ paddingRight: 25, paddingLeft: 25, paddingBottom: 20 }} heading='Cassino Games'>
-            <Row style={{ marginBottom: 12 }}>
-              <Image src={jetx} style={{ width: 150, height: 120, borderRadius: 12 }} />
-              <Image src={magic_frog} style={{ width: 150, height: 120, borderRadius: 12, background: theme.colors.blue }} />
+            <Row style={{ marginBottom: 12 }}> 
+              <Image src={magic_world} style={{ width: '48%', height: '25%', borderRadius: 12, background: theme.colors.secondary }} />
+              <Image src={magic_frog} style={{ width: '48%', height: '25%', borderRadius: 12, background: theme.colors.blue }} />
             </Row>
             <Row style={{ marginBottom: 12 }}>
-              <Image src={magic_garden} style={{ width: 150, height: 120, borderRadius: 12, background: theme.colors.shadow }} />
-              <Image src={magic_world} style={{ width: 150, height: 120, borderRadius: 12, background: theme.colors.blue }} />
+              <Image src={magic_garden} style={{ width: '48%', height: '25%', borderRadius: 12, background: theme.colors.shadow }} />
+              <Image src={magic_world} style={{ width: '48%', height: '25%', borderRadius: 12, background: theme.colors.blue }} />
             </Row>
             <Row style={{ marginBottom: 12 }}>
-              <Image src={legion_gold} style={{ width: 150, height: 120, borderRadius: 12 }} />
-              <Image src={aviator} style={{ width: 150, height: 120, borderRadius: 12, background: theme.colors.blue  }} />
+              <Image src={magic_world} style={{ width: '48%', height: '25%', borderRadius: 12, background: theme.colors.secondary }} />
+              <Image src={magic_frog} style={{ width: '48%', height: '25%', borderRadius: 12, background: theme.colors.grey }} />
             </Row>
             <Row style={{ marginBottom: 12 }}>
-              <Image src={magic_garden} style={{ width: 150, height: 120, borderRadius: 12, background: theme.colors.shadow }} />
-              <Image src={magic_world} style={{ width: 150, height: 120, borderRadius: 12, background: theme.colors.blue }} />
+              <Image src={magic_garden} style={{ width: '48%', height: '25%', borderRadius: 12, background: theme.colors.shadow }} />
+              <Image src={magic_world} style={{ width: '48%', height: '25%', borderRadius: 12, background: theme.colors.grey_strong }} />
             </Row>
           </Card>
         </StyledRightColumn>

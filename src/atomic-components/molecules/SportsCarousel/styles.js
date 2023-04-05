@@ -30,7 +30,7 @@ export const StyledArrow = styled.div`
 `
 
 export const PrevButton = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.grey_light};
+  border: 1px solid ${({ theme }) => theme.colors.ice};
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -46,7 +46,7 @@ export const PrevButton = styled.div`
 `;
 
 export const NextButton = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.grey_light};  
+  border: 1px solid ${({ theme }) => theme.colors.ice};  
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;

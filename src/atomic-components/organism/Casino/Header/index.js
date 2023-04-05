@@ -21,8 +21,8 @@ function CasinoHeader() {
         condition={isMobile}
         render={() => (
           <>
-            <ImagesCarousel isSidebarOpen={isSidebarOpen} dataSlider={dataSlider} width={width}  />
-            <NavBar heightProps={heightProps} isSidebarOpen={isSidebarOpen} setHasToggleSidebarProps={setIsSidebarOpen} /> 
+            <ImagesCarousel fully isSidebarOpen={!isSidebarOpen} dataSlider={dataSlider} width={width}  />
+            <NavBar heightProps={heightProps} isSidebarOpen={isSidebarOpen} /> 
           </>
         )}
         renderElse={() => (

@@ -76,7 +76,7 @@ function ImagesCarousel({ isSidebarOpen, title, swicth, dataSlider, fully }, pro
         )}   
 
         <StyledScroll>
-            <Row fully={fully} isMobile={isMobile}>
+            <Row isMobile={isMobile}>
               <If 
                 condition={isMobile}
                 render={() => dataSlider?.map((item, index) =>  (
@@ -88,13 +88,13 @@ function ImagesCarousel({ isSidebarOpen, title, swicth, dataSlider, fully }, pro
                 renderElse={() => (
                     dataSlider?.map((item, index) =>  (  
                       <>
-                      {fully ? (
-                          <Image widthProps='100%'  shadow key={item.id}  src={item.src.casino} alt='banner shoes' />   
-                      ) : (
-                        <StyledBanner slideIndex={slideIndex === index + 1} isMobile={!isMobile}>       
-                          <Image widthProps='100%'  shadow key={item.id}  src={item.src.web} alt='banner shoes' />   
-                        </StyledBanner>
-                      )}
+                        {fully ? (
+                            <Image widthProps='100%'  shadow key={item.id}  src={item.src.casino} alt='banner shoes' />   
+                        ) : (
+                          <StyledBanner slideIndex={slideIndex === index + 1} isMobile={!isMobile}>       
+                            <Image widthProps='100%'  shadow key={item.id}  src={item.src.web} alt='banner shoes' />   
+                          </StyledBanner>
+                        )}
                       </>
                     ))
                     )}

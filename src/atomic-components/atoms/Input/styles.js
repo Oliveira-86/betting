@@ -17,8 +17,8 @@ export const InputStyle = styled.input`
   padding: 10px 15px;
   font-size: 1.25rem;
   font-family: ${({ theme }) => theme.fonts.bold};
-  color: ${({ theme }) => theme.colors.black};
-  background-color: ${({ theme }) => theme.colors.ice};
+  color: ${({ theme }) => theme.colors.ice};
+  background-color: ${({ theme }) => theme.colors.card};
   border: none;
   border-radius: 0px 15px 15px 0px;
   width: 100%;
@@ -28,7 +28,7 @@ export const InputStyle = styled.input`
   }
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.ice};
     font-size: 1rem;
   }
   
@@ -51,6 +51,6 @@ export const StyledSearch = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 15px 0px 0px 15px;
-  background-color:${({ theme }) => theme.colors.ice};
+  background-color:${({ theme }) => theme.colors.card};
   padding-left: 8px;
 `;

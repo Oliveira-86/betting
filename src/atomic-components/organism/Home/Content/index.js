@@ -22,7 +22,7 @@ function HomeContent({ sportsList, sportsCategory }) {
       condition={isMobile}
       render={() => (
         <StyledHomeContent isMobile={isMobile}>
-          <SportsCarousel list={sportsList} />
+          <SportsCarousel sportsList={sportsList} />
           <FilterCarousel sportsCategory={sportsCategory} />
           <Row>
             <Column style={{ width: '100%' }}>
@@ -44,7 +44,7 @@ function HomeContent({ sportsList, sportsCategory }) {
       renderElse={() => (
         <StyledHomeContent>
           <Row>
-            <SportsCarousel hasArrow list={sportsList} />
+            <SportsCarousel hasArrow sportsList={sportsList} />
           </Row>
           <Row>
             <SportsBarside style={{ width: '20%', marginRight: 10 }} heading='Esportes' sportsCategory={sportsCategory} />

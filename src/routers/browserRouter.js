@@ -5,7 +5,7 @@ import Casino from "../pages/Casino";
 export const routers = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Home />
   },
   {
     path: "/cassino",

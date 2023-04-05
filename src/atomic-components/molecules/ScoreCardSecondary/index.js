@@ -24,44 +24,44 @@ function ScoreCardSecondary({
       <Row>
         <Row>
           <img style={{ width: 25, height: 25 }} src={logo1} alt={altTeam1} />
-          <Text marginLeft='5px' textAlign={'center'} variant='black' small bold>{nameTeam1}</Text>
+          <Text marginLeft='5px' textAlign={'center'} variant='ice' small bold>{nameTeam1}</Text>
         </Row>
-          <Title textAlign={'center'} small bold>{goalsTeam1}</Title>
+          <Title variant='ice' textAlign={'center'} small bold>{goalsTeam1}</Title>
       </Row>
       <Row>
         <Row>
           <img style={{ width: 25, height: 25 }}  src={logo2} alt={altTeam2} />
-          <Text marginLeft='5px' textAlign={'center'} MarginTop={'5px'} small bold>{nameTeam2}</Text>
+          <Text marginLeft='5px' textAlign={'center'} variant='ice' MarginTop={'5px'} small bold>{nameTeam2}</Text>
         </Row>
-          <Title textAlign={'center'} small bold>{goalsTeam2}</Title>
+          <Title textAlign={'center'} variant='ice' small bold>{goalsTeam2}</Title>
       </Row>
       <Row marginVertical>
-          <Time variant='grey' time={time} />
+          <Time variant='ice'time={time} />
       </Row>
       <Row>
         <Badge 
           centered 
           widthProps='28%' 
           heightProps='30px' 
-          textVariant='grey_strong' 
+          textVariant='ice' 
           name={bet[0]} 
-          variant='ice' 
+          variant='black' 
         />
         <Badge 
           centered 
           widthProps='28%' 
           heightProps='30px' 
-          textVariant='grey_strong' 
+          textVariant='ice' 
           name={bet[1]} 
-          variant='ice' 
+          variant='black' 
         />
         <Badge 
           centered 
           widthProps='28%' 
           heightProps='30px' 
-          textVariant='grey_strong' 
+          textVariant='ice' 
           name={bet[2]} 
-          variant='ice' 
+          variant='black' 
         />
       </Row>
     </StyledScoreCardSecondary>

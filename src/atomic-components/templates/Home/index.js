@@ -114,7 +114,7 @@ const DATA = [
 function HomeTemplate({ sportsCategory }) {
   
   const { isMobile } = useDeviceDetect()
-
+  
   return (
     <>
       <StyledHomeTemplate>

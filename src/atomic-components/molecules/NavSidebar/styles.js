@@ -54,3 +54,10 @@ export const BgShadow = styled.div`
       z-index: 1000;`  
   }
 `
+
+export const UnderLine = styled.div`
+  height: 2px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  margin-top: 1.5px;
+`

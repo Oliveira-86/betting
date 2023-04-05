@@ -34,6 +34,9 @@ export const Row = styled.nav`
   justify-content: space-between;
   width: ${({ widthProps }) => widthProps};
 `
-export const ItemContainer = styled(StyledLink)`
-
+export const UnderLine = styled.div`
+  height: 2px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  margin-top: 1.5px;
 `

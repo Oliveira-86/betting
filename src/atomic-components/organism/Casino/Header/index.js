@@ -22,12 +22,12 @@ function CasinoHeader() {
         render={() => (
           <>
             <ImagesCarousel fully isSidebarOpen={!isSidebarOpen} dataSlider={dataSlider} width={width}  />
-            <NavBar heightProps={heightProps} isSidebarOpen={isSidebarOpen} /> 
+            <NavBar casinoNav heightProps={heightProps} isSidebarOpen={isSidebarOpen} /> 
           </>
         )}
         renderElse={() => (
           <>
-            <NavBar heightProps={true} />     
+            <NavBar casinoNav heightProps={true} />     
             <ImagesCarousel fully isSidebarOpen={!isSidebarOpen} dataSlider={dataSlider} width={width}  />
           </>
         )}

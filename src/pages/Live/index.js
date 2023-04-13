@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyledLive } from './styles'
+import { SPORTS_CATEGORY, SPORTS_CHAMPIONSHIP } from '../../api/sports'
 import LiveTemplate from '../../atomic-components/templates/Live'
 
 function Live() {
   return (
-    <StyledLive> 
-      <LiveTemplate />
-    </StyledLive>
+    <> 
+      <LiveTemplate sportsCategory={SPORTS_CATEGORY}  sportsChampionship={SPORTS_CHAMPIONSHIP} />
+    </>
   )
 }
 export default Live

@@ -44,6 +44,9 @@ const BaseStyle = css`
    ${({ MarginTop }) => MarginTop && css`
     margin-top: ${MarginTop};
   `}
+  ${({ marginBottom }) => marginBottom && css`
+    margin-top: ${marginBottom};
+  `}
   ${({ verticalPadding }) => verticalPadding && css`
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -83,11 +86,14 @@ export const StyledParagraph = styled.p`
   ${({ bold }) => bold && css`
       font-weight: bold;
   `}
+
+  ${({ centered }) => centered && css`
+      text-align: center;
+  `}
   ${(props) =>
     props.big &&
     `
       font-size: 1.2em;
-      margin-bottom: 0.5rem;
     `}
 
   ${(props) =>

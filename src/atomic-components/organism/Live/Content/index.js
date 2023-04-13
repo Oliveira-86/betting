@@ -2,6 +2,7 @@ import React from 'react'
 import { StyledHomeContent, Row, Column } from './styles';
 import Card from '../../../atoms/Card';
 import { NEXT_GAMES, SPORTS } from '../../../../api/sports';
+import { SPORTS_BASKET, SPORTS_TENNIS } from '../../../../api/sports_lives';
 import TableRow from '../../../molecules/TableRow';
 import { Button } from '../../../atoms/Button';
 import SportsCarousel from '../../../molecules/SportsCarousel';
@@ -12,16 +13,12 @@ import useDeviceDetect from '../../../../hook/useDeviceDetect';
 import FilterCarousel from '../../../molecules/FilterCarousel';
 import Image from '../../../atoms/Image';
 import vertical_banner from '../../../../assets/vertical_banner.jpg'
-import BettingCard from '../../../molecules/BettingCard';
-import { useState } from 'react';
+import NavBar from '../../../molecules/NavBar';
+import theme from '../../../../global/styles/theme';
 
-function HomeContent({ sportsList, sportsCategory }) {
-  const [bet1, setBet1] = useState(null)
-  const [bet2, setBet2] = useState(null)
-  const [bet3, setBet3] = useState(null)
-
+function LiveContent({ sportsList, sportsCategory, sportsChampionship }) {
   const { isMobile } = useDeviceDetect()
-
+  
   return (
 
     <If  
@@ -36,16 +33,10 @@ function HomeContent({ sportsList, sportsCategory }) {
                 tableRowData={SPORTS}
                 heading='Destaques'
                 swicth
-                setBet1
-                setBet2
-                setBet3
               /> 
               <TableRow 
                 tableRowData={SPORTS}
                 heading='Próximos Jogos'
-                setBet1
-                setBet2
-                setBet3
               />  
             </Column>
           </Row> 
@@ -54,41 +45,50 @@ function HomeContent({ sportsList, sportsCategory }) {
         </StyledHomeContent>
       )}
       renderElse={() => (
-        <StyledHomeContent>
-          <Row>
-            <SportsCarousel hasArrow sportsList={sportsList} />
-          </Row>
-          <Row>
-            <SportsBarside style={{ width: '20%', marginRight: 10 }} heading='Esportes' sportsCategory={sportsCategory} />
-            <Column style={{ width: '60%', marginRight: 10 }}>
-              <TableRow 
-                tableRowData={SPORTS}
-                heading='Ao vivo'
-                setBet1={setBet1}
-                setBet2={setBet2}
-                setBet3={setBet3}
-              /> 
-              <TableRow 
-                tableRowData={SPORTS}
-                heading='Próximos Jogos'
-                setBet1={setBet1}
-                setBet2={setBet2}
-                setBet3={setBet3}
-              />  
-            </Column>
-            <Column style={{ width: '30%', justifyContent: 'flex-start'}}>
-              <BettingCard />
-              <SportsColumn 
-                tableRowData={SPORTS.slice(3)}
-                heading='Destaques'
-              />  
-            </Column>  
-          </Row>
-        </StyledHomeContent>
+          <>
+          <NavBar />
+            <StyledHomeContent>
+              <Row>
+                <SportsBarside 
+                  live 
+                  heading='Esportes' 
+                  liveHeading='Campeonatos' 
+                  sportsCategory={sportsCategory} 
+                  sportsChampionship={sportsChampionship} 
+                  style={{ width: '20%', marginRight: 10 }} 
+                />
+                <Column style={{ width: '60%', marginRight: 10 }}>
+                  <TableRow 
+                    tableRowData={SPORTS}
+                    heading='Futebol'
+                  /> 
+                  <TableRow 
+                    tableRowData={SPORTS_BASKET}
+                    heading='Basquete'
+                  /> 
+                  <TableRow 
+                    tableRowData={SPORTS_TENNIS}
+                    heading='Tênis'
+                    tennis
+                  /> 
+                  <TableRow 
+                    tableRowData={SPORTS}
+                    heading='Baseball'
+                  />  
+                </Column>
+                <Column style={{ width: '30%'}}>
+                  <SportsColumn 
+                    tableRowData={SPORTS.slice(3)}
+                    heading='Destaques'
+                  />  
+                </Column>  
+              </Row>
+          </StyledHomeContent>
+        </>
       )}
   />
     
   )
 }
 
-export default HomeContent
+export default LiveContent

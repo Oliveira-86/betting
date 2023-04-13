@@ -44,7 +44,7 @@ function ScoreCardSecondary({
           widthProps='28%' 
           heightProps='30px' 
           textVariant='ice' 
-          name={bet[0]} 
+          name={bet} 
           variant='black' 
         />
         <Badge 
@@ -52,7 +52,7 @@ function ScoreCardSecondary({
           widthProps='28%' 
           heightProps='30px' 
           textVariant='ice' 
-          name={bet[1]} 
+          name={bet} 
           variant='black' 
         />
         <Badge 
@@ -60,7 +60,7 @@ function ScoreCardSecondary({
           widthProps='28%' 
           heightProps='30px' 
           textVariant='ice' 
-          name={bet[2]} 
+          name={bet} 
           variant='black' 
         />
       </Row>

@@ -17,11 +17,19 @@ export const InputStyle = styled.input`
   padding: 10px 15px;
   font-size: 1.25rem;
   font-family: ${({ theme }) => theme.fonts.bold};
-  color: ${({ theme }) => theme.colors.ice};
+  color: ${({ theme }) => theme.colors.grey_strong};
   background-color: ${({ theme }) => theme.colors.card};
   border: none;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: ${({ hasSearch }) => hasSearch ?  '0px 15px 15px 0px' : '15px 15px 15px 15px'};
   width: 100%;
+
+  ${({ small}) => small && css`
+    width: 80px; 
+    height: 30px; 
+    background-color:  ${({ theme }) => theme.colors.ice}; 
+    border-radius: 4px; 
+    font-size: 1rem;
+  `}
 
   &:focus {
       outline: none;
@@ -30,6 +38,11 @@ export const InputStyle = styled.input`
   ::placeholder {
     color: ${({ theme }) => theme.colors.ice};
     font-size: 1rem;
+
+    ${({ small }) => small && css`
+      text-align: end;
+      color: ${({ theme }) => theme.colors.grey_strong};
+    `}
   }
   
   @media ${devices.mobileL} {

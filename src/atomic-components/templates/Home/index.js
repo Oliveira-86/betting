@@ -122,7 +122,6 @@ function HomeTemplate({ sportsCategory }) {
         <HomeContent sportsCategory={sportsCategory} sportsList={DATA} />
       </StyledHomeTemplate>
       {isMobile ? <BottomBar /> : null}
-      
     </>
   )
 }

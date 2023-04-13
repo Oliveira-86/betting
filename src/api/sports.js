@@ -1,13 +1,14 @@
 import { v4 as uuidv4 } from "uuid";
 import { MdCasino, MdSportsHockey } from 'react-icons/md'
-import { GiAmericanFootballBall, GiBasketballBall, GiBoxingGlove, GiCycling, GiSoccerBall } from 'react-icons/gi'
+import { GiAmericanFootballBall, GiBasketballBall, GiBoxingGlove, GiCycling, GiSoccerBall,  } from 'react-icons/gi'
+import { BsFillTrophyFill } from 'react-icons/bs'
 import { FaVolleyballBall } from 'react-icons/fa'
 import { IoMdTennisball } from 'react-icons/io'
 import theme from "../global/styles/theme";
 
 export const SPORTS = [
   {
-    id: 'game1',
+    id: uuidv4(),
     team1: "Manchester United",
     team2: "Liverpool",
     logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -16,13 +17,14 @@ export const SPORTS = [
       team1: 2,
       team2: 3,
     },
+    value: '',
     time: { hour: '15:30', live: true },
     league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
+    bet: [{ id: uuidv4(), odd: '1.2'}, { id: uuidv4(), odd: '1.8'}, { id: uuidv4(), odd: '2.0'}, { id: uuidv4(), odd: '2.1'}, { id: uuidv4(), odd: '2.2'}]
   },
   {
-    id: 'game2',
-    team1: "Manchester City",
+    id: uuidv4(),
+    team1: "NY Nyx",
     team2: "Arsenal",
     logo1: "https://media.api-sports.io/football/teams/50.png",
     logo2: "https://media.api-sports.io/football/teams/42.png",
@@ -30,12 +32,13 @@ export const SPORTS = [
       team1: 1,
       team2: 1,
     },
+    value: '',
     time: { hour: '15:30', live: true },
     league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+    bet: [{ id: uuidv4(), odd: '1.2'}, { id: uuidv4(), odd: '1.8'}, { id: uuidv4(), odd: '2.0'}, { id: uuidv4(), odd: '2.1'}, { id: uuidv4(), odd: '2.2'}]
   },
   {
-    id: 'game3',
+    id: uuidv4(),
     team1: "Manchester United",
     team2: "Liverpool",
     logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -44,12 +47,13 @@ export const SPORTS = [
       team1: 2,
       team2: 3,
     },
+    value: '',
     time: { hour: '15:30', live: true  },
     league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+    bet: [{ id: uuidv4(), odd: '1.2'}, { id: uuidv4(), odd: '1.8'}, { id: uuidv4(), odd: '2.0'}, { id: uuidv4(), odd: '2.1'}, { id: uuidv4(), odd: '2.2'}]
   },
   {
-    id: 'game4',
+    id: uuidv4(),
     team1: "Manchester City",
     team2: "Arsenal",
     logo1: "https://media.api-sports.io/football/teams/50.png",
@@ -58,12 +62,13 @@ export const SPORTS = [
       team1: 1,
       team2: 1,
     },
+    value: '',
     time: { hour: '15:30', live: false },
     league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+    bet: [{ id: uuidv4(), odd: '1.2'}, { id: uuidv4(), odd: '1.8'}, { id: uuidv4(), odd: '2.0'}, { id: uuidv4(), odd: '2.1'}, { id: uuidv4(), odd: '2.2'}]
   },
   {
-    id: 'game5',
+    id: uuidv4(),
     team1: "Manchester United",
     team2: "Liverpool",
     logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -72,12 +77,13 @@ export const SPORTS = [
       team1: 2,
       team2: 3,
     },
+    value: '',
     time: { hour: '15:30', live: false },
     league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
+    bet: [{ id: uuidv4(), odd: '1.2'}, { id: uuidv4(), odd: '1.8'}, { id: uuidv4(), odd: '2.0'}, { id: uuidv4(), odd: '2.1'}, { id: uuidv4(), odd: '2.2'}]
   },
   {
-    id: 'game6',
+    id: uuidv4(),
     team1: "Manchester City",
     team2: "Arsenal",
     logo1: "https://media.api-sports.io/football/teams/50.png",
@@ -86,12 +92,13 @@ export const SPORTS = [
       team1: 1,
       team2: 1,
     },
+    value: '',
     time: { hour: '15:30', live: false },
     league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+    bet: [{ id: uuidv4(), odd: '1.2'}, { id: uuidv4(), odd: '1.8'}, { id: uuidv4(), odd: '2.0'}, { id: uuidv4(), odd: '2.1'}, { id: uuidv4(), odd: '2.2'}]
   },
   {
-    id: 'game7',
+    id: uuidv4(),
     team1: "Manchester United",
     team2: "Liverpool",
     logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -100,12 +107,13 @@ export const SPORTS = [
       team1: 2,
       team2: 3,
     },
+    value: '',
     time: { hour: '15:30', live: false },
     league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+    bet: [{ id: uuidv4(), odd: '1.2'}, { id: uuidv4(), odd: '1.8'}, { id: uuidv4(), odd: '2.0'}, { id: uuidv4(), odd: '2.1'}, { id: uuidv4(), odd: '2.2'}]
   },
   // {
-  //   id: 'game8',
+  //   id: uuidv4(),
   //   team1: "Manchester City",
   //   team2: "Arsenal",
   //   logo1: "https://media.api-sports.io/football/teams/50.png",
@@ -114,11 +122,12 @@ export const SPORTS = [
   //     team1: 1,
   //     team2: 1,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
-  //   bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  //   bet: [{ id: uuidv4(), odd: '1.2'}, { id: uuidv4(), odd: '1.8'}, { id: uuidv4(), odd: '2.0'}, { id: uuidv4(), odd: '2.1'}, { id: uuidv4(), odd: '2.2'}, '2.8']
   // },{
-  //   id: 'game9',
+  //   id: uuidv4(),
   //   team1: "Manchester United",
   //   team2: "Liverpool",
   //   logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -127,12 +136,13 @@ export const SPORTS = [
   //     team1: 2,
   //     team2: 3,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
   //   bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
   // },
   // {
-  //   id: 'game10',
+  //   id: ',
   //   team1: "Manchester City",
   //   team2: "Arsenal",
   //   logo1: "https://media.api-sports.io/football/teams/50.png",
@@ -141,12 +151,13 @@ export const SPORTS = [
   //     team1: 1,
   //     team2: 1,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
   //   bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
   // },
   // {
-  //   id: 'game11',
+  //   id: ',
   //   team1: "Manchester United",
   //   team2: "Liverpool",
   //   logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -155,12 +166,13 @@ export const SPORTS = [
   //     team1: 2,
   //     team2: 3,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
   //   bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
   // },
   // {
-  //   id: 'game12',
+  //   id: ',
   //   team1: "Manchester City",
   //   team2: "Arsenal",
   //   logo1: "https://media.api-sports.io/football/teams/50.png",
@@ -169,12 +181,13 @@ export const SPORTS = [
   //     team1: 1,
   //     team2: 1,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
   //   bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
   // },
   // {
-  //   id: 'game13',
+  //   id: ',
   //   team1: "Manchester United",
   //   team2: "Liverpool",
   //   logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -183,12 +196,13 @@ export const SPORTS = [
   //     team1: 2,
   //     team2: 3,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
   //   bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
   // },
   // {
-  //   id: 'game14',
+  //   id: ',
   //   team1: "Manchester City",
   //   team2: "Arsenal",
   //   logo1: "https://media.api-sports.io/football/teams/50.png",
@@ -197,12 +211,13 @@ export const SPORTS = [
   //     team1: 1,
   //     team2: 1,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
   //   bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
   // },
   // {
-  //   id: 'game15',
+  //   id: ',
   //   team1: "Manchester United",
   //   team2: "Liverpool",
   //   logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -211,12 +226,13 @@ export const SPORTS = [
   //     team1: 2,
   //     team2: 3,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
   //   bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
   // },
   // {
-  //   id: 'game16',
+  //   id: ',
   //   team1: "Manchester City",
   //   team2: "Arsenal",
   //   logo1: "https://media.api-sports.io/football/teams/50.png",
@@ -225,6 +241,7 @@ export const SPORTS = [
   //     team1: 1,
   //     team2: 1,
   //   },
+  // value: '',
   //   time: { hour: '15:30', live: true },
   //   league: 'Premier League',
   //   bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
@@ -233,7 +250,65 @@ export const SPORTS = [
 
 export const NEXT_GAMES = [
   {
-    id: 'game1',
+    id: uuidv4(),
+    team1: "Manchester United",
+    team2: "Liverpool",
+    logo1: "https://media.api-sports.io/football/teams/33.png",
+    logo2: "https://media.api-sports.io/football/teams/40.png",
+    goals: {
+      team1: '',
+      team2: '',
+    },
+    value: '',
+    time: { hour: '15:30', live: false },
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
+  },
+  {
+    id: uuidv4(),
+    team1: "NY Nyx",
+    team2: "Arsenal",
+    logo1: "https://media.api-sports.io/football/teams/50.png",
+    logo2: "https://media.api-sports.io/football/teams/42.png",
+    goals: {
+      team1: '',
+      team2: '',
+    },
+    value: '',
+    time: { hour: '15:30', live: false },
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },
+  {
+    id: uuidv4(),
+    team1: "Manchester United",
+    team2: "Liverpool",
+    logo1: "https://media.api-sports.io/football/teams/33.png",
+    logo2: "https://media.api-sports.io/football/teams/40.png",
+    goals: {
+      team1: '',
+      team2: '',
+    },
+    time: { hour: '15:30', live: false },
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },
+  {
+    id: uuidv4(),
+    team1: "NY Nyx",
+    team2: "Arsenal",
+    logo1: "https://media.api-sports.io/football/teams/50.png",
+    logo2: "https://media.api-sports.io/football/teams/42.png",
+    goals: {
+      team1: '',
+      team2: '',
+    },
+    time: { hour: '15:30', live: false },
+    league: 'Premier League',
+    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
+  },
+  {
+    id: uuidv4(),
     team1: "Manchester United",
     team2: "Liverpool",
     logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -247,8 +322,8 @@ export const NEXT_GAMES = [
     bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
   },
   {
-    id: 'game2',
-    team1: "Manchester City",
+    id: uuidv4(),
+    team1: "NY Nyx",
     team2: "Arsenal",
     logo1: "https://media.api-sports.io/football/teams/50.png",
     logo2: "https://media.api-sports.io/football/teams/42.png",
@@ -261,63 +336,7 @@ export const NEXT_GAMES = [
     bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
   },
   {
-    id: 'game3',
-    team1: "Manchester United",
-    team2: "Liverpool",
-    logo1: "https://media.api-sports.io/football/teams/33.png",
-    logo2: "https://media.api-sports.io/football/teams/40.png",
-    goals: {
-      team1: '',
-      team2: '',
-    },
-    time: { hour: '15:30', live: false },
-    league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
-  },
-  {
-    id: 'game4',
-    team1: "Manchester City",
-    team2: "Arsenal",
-    logo1: "https://media.api-sports.io/football/teams/50.png",
-    logo2: "https://media.api-sports.io/football/teams/42.png",
-    goals: {
-      team1: '',
-      team2: '',
-    },
-    time: { hour: '15:30', live: false },
-    league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
-  },
-  {
-    id: 'game5',
-    team1: "Manchester United",
-    team2: "Liverpool",
-    logo1: "https://media.api-sports.io/football/teams/33.png",
-    logo2: "https://media.api-sports.io/football/teams/40.png",
-    goals: {
-      team1: '',
-      team2: '',
-    },
-    time: { hour: '15:30', live: false },
-    league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.1', '2.2', '2.3', '2.8']
-  },
-  {
-    id: 'game6',
-    team1: "Manchester City",
-    team2: "Arsenal",
-    logo1: "https://media.api-sports.io/football/teams/50.png",
-    logo2: "https://media.api-sports.io/football/teams/42.png",
-    goals: {
-      team1: '',
-      team2: '',
-    },
-    time: { hour: '15:30', live: false },
-    league: 'Premier League',
-    bet: ['1.2', '1.8', '2.0', '2.2', '2.3', '2.8']
-  },
-  {
-    id: 'game7',
+    id: uuidv4(),
     team1: "Manchester United",
     team2: "Liverpool",
     logo1: "https://media.api-sports.io/football/teams/33.png",
@@ -403,6 +422,81 @@ export const SPORTS_CATEGORY = [
     icon: {
             active: <MdSportsHockey size={15} color={theme.colors.secondary} />,
             inactive: <MdSportsHockey size={15} color={theme.colors.grey} />
+          }
+  },
+];
+
+export const SPORTS_CHAMPIONSHIP = [
+  {
+    id: uuidv4(),
+    name: 'Brasileirão',
+    icon: {
+            active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+            inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
+          }
+  },
+  {
+    id: uuidv4(),
+    name: 'Premier league',
+    icon: {
+            active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+            inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
+          }
+  },
+  {
+    id: uuidv4(),
+    name: 'Libertadores',
+    icon: {
+      active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+      inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
+    }
+  },
+  {
+    id: uuidv4(),
+    name: 'Champions League',
+    icon: {
+            active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+            inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
+          }
+  },
+  {
+    id: uuidv4(),
+    name: 'NBA',
+    icon: {
+            active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+            inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
+          }
+  },
+  {
+    id: uuidv4(),
+    name: 'NBB',
+    icon:  {
+            active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+            inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
+          } 
+  },
+  {
+    id: uuidv4(),
+    name: 'Liga Nacional',
+    icon: {
+            active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+            inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
+          }
+  },
+  {
+    id: uuidv4(),
+    name: 'ATP Houston',
+    icon: {
+            active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+            inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
+          }
+  },
+  {
+    id: uuidv4(),
+    name: 'ATP Paris',
+    icon: {
+            active: <BsFillTrophyFill size={15} color={theme.colors.secondary} />,
+            inactive: <BsFillTrophyFill size={15} color={theme.colors.grey} />
           }
   },
 ];

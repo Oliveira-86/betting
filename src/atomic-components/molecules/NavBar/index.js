@@ -143,7 +143,7 @@ const NavBar = ({ heightProps, casinoNav }) => {
               </Link>
             </Row>
             <Row marginTop widthProps={width <= 1250 ? '25%' : '20%'}>
-              <Button textVariant='secondary' variant='outlinedSecondary' label='Login' heightProps={'30px'} marginRight={'10px'} />
+              <Button textVariant='secondary' variant='outlinedSecondary' label='Login' heightProps={'30px'} marginRight={'10px'} onClick={() => navigate("/login")} />
               <Button textVariant='black' variant='secondary' label='Registre-se' heightProps={'30px'} />
             </Row>
           </StyledHeaderMol>

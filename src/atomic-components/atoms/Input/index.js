@@ -10,14 +10,18 @@ const Input = (props) => {
   return (
     <>
       <StyledInput {...props}>
-        <StyledSearch>
-          <BiSearch size={25} color={theme.colors.ice} />
-        </StyledSearch>
+        {props.search && (
+          <StyledSearch>
+            <BiSearch size={25} color={theme.colors.ice} />
+          </StyledSearch>
+        )}
         <InputStyle
           {...props}
           onFocus={() => setIsFocus(true)}
-          onBlur={() => setIsFocus(false)}
+          onBlur={props.onBlur}
           placeholderTextColor={theme.colors.black}
+          hasSearch={props.search}
+          small={props.small}
         />
       </StyledInput>
     </>

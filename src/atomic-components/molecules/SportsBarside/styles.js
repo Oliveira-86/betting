@@ -7,7 +7,7 @@ export const StyledBarside = styled.section`
 `
 
 export const SyledSportsBarsides = styled(StyledCard)`
-  height: 600px;
+  height: 635px;
   width: 100%;
   margin-right: 10px;
   padding: 12px 25px 12px 25px;
